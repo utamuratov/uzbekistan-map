@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ngx-uzbekistan-map",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  }
+}

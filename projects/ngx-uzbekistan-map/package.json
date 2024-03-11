@@ -1,0 +1,35 @@
+{
+  "name": "ngx-uzbekistan-map",
+  "version": "0.0.1",
+  "author": {
+    "name": "Odilbek Utamuratov",
+    "email": "odil.utamuratov@gmail.com",
+    "url": "https://medium.com/@odil.utamuratov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/utamuratov/uzbekistan-map.git"
+  },
+  "bugs": {
+    "url": "https://github.com/utamuratov/uzbekistan-map/issues",
+    "email": "odil.utamuratov@gmail.com"
+  },
+  "homepage": "https://github.com/utamuratov/uzbekistan-map#readme",
+  "keywords": [
+    "angular",
+    "angular 16",
+    "angular 17",
+    "uzbekistan-map",
+    "svg",
+    "map"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^16.0.3",
+    "@angular/core": "^16.0.3"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
