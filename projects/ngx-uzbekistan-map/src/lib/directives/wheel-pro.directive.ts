@@ -12,7 +12,7 @@ export class WheelProDirective {
     event.preventDefault();
 
     const svg = this.el.nativeElement.children[0];
-    let scale = +(svg.style.getPropertyValue('scale') || '1');
+    let scale = +(svg.style.getPropertyValue('scale') || '1.5');
 
     const plusMinus = event.wheelDelta > 0 ? 1 : -1;
     const step = scale > 2 ? Math.ceil(scale / 10) : 0.2;

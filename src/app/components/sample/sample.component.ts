@@ -1,18 +1,26 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NgxUzbekistanMapComponent } from 'ngx-uzbekistan-map';
+import { NgxUzbekistanMapLeafletComponent } from 'ngx-uzbekistan-map';
+import { NgxUzbekistanMapComponent } from '../../../../projects/ngx-uzbekistan-map/src/lib/ngx-uzbekistan-map.component';
 
 @Component({
   selector: 'app-sample',
   standalone: true,
-  imports: [NgxUzbekistanMapComponent],
+  imports: [NgxUzbekistanMapComponent, NgxUzbekistanMapLeafletComponent],
   template: `
     <div style="height: 100vh">
       <ngx-uzbekistan-map
-        #uzbekistanMapPro
+        #uzbekistanMap
         (onSelectedProvince)="handleSelectedProvince($event)"
         (onSelectedDistrict)="handleSelectedDistrict($event)"
         (onSelectedUzbekistan)="handleSelectedUzbekistan()"
       ></ngx-uzbekistan-map>
+
+      <ngx-uzbekistan-map-leaflet
+        #uzbekistanMapLeaflet
+        (onSelectedProvince)="handleSelectedProvince($event)"
+        (onSelectedDistrict)="handleSelectedDistrict($event)"
+        (onSelectedUzbekistan)="handleSelectedUzbekistan()"
+      ></ngx-uzbekistan-map-leaflet>
     </div>
   `,
   styleUrl: './sample.component.css',

@@ -55,7 +55,7 @@ export class NgxUzbekistanMapComponent {
   onSelectedUzbekistan = new EventEmitter<void>();
 
   get svg() {
-    return this.svgElementRef.nativeElement as SVGElement; //svgContainer.children[0] as SVGElement;
+    return this.svgElementRef.nativeElement as SVGElement;
   }
 
   private _lastSelectedProvincePath: SVGPathElement | undefined;
