@@ -1,0 +1,70 @@
+:host {
+  width: 100%;
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+::ng-deep {
+  svg#svgMap {
+    cursor: move;
+    /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+
+    path {
+      fill: #303f9f;
+      cursor: pointer;
+      pointer-events: auto !important;
+      // transition: stroke-width 500ms linear !important;
+
+      &:active {
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
+      }
+    }
+
+    path[data-type="district"] {
+      fill: #e5c100;
+    }
+
+    path.active-district {
+      fill: #f00;
+    }
+
+    &:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
+  }
+}
+
+.leaflet-container {
+  background: #fff;
+  outline: 0;
+}
