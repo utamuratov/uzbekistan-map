@@ -170,7 +170,7 @@ export class NgxUzbekistanMapComponent {
     // Apply the translation to the SVG container
     const scale = this.svg.clientHeight / bbox.height;
     this.svg.style.transform = `translate(${tx}px, ${ty}px)`;
-    this.svg.style.transitionDuration = Math.ceil(scale / 10) * 0.2 + 's';
+    // this.svg.style.transitionDuration = Math.ceil(scale / 10) * 0.2 + 's';
     this.svg.style.scale = `${scale}`;
     this.setPathsStrokeWidth(`${1 / scale}px`);
   }

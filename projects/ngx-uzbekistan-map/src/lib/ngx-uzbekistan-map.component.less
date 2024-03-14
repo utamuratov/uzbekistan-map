@@ -28,24 +28,26 @@
 }
 
 svg {
-  transition: all 0.2s ease;
+  transition: scale 0.1s ease-in-out;
 
-  cursor: move;
-  /* fallback if grab cursor is unsupported */
-  cursor: grab;
-  cursor: -moz-grab;
-  cursor: -webkit-grab;
+  // TODO: REMOVE OR IMPLEMENT
+  // cursor: move;
+  // /* fallback if grab cursor is unsupported */
+  // cursor: grab;
+  // cursor: -moz-grab;
+  // cursor: -webkit-grab;
 
   path {
     fill: #303f9f;
     cursor: pointer;
     // transition: stroke-width 500ms linear !important;
 
-    &:active {
-      cursor: grabbing;
-      cursor: -moz-grabbing;
-      cursor: -webkit-grabbing;
-    }
+    // TODO: REMOVE OR IMPLEMENT
+    // &:active {
+    //   cursor: grabbing;
+    //   cursor: -moz-grabbing;
+    //   cursor: -webkit-grabbing;
+    // }
   }
 
   path[data-type="district"] {
