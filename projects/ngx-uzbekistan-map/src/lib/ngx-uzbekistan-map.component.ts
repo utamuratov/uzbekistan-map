@@ -45,6 +45,9 @@ export class NgxUzbekistanMapComponent {
     }
   }
 
+  @Input()
+  scale = '1.5';
+
   @Output()
   onSelectedProvince = new EventEmitter<IArea>();
 
@@ -118,7 +121,7 @@ export class NgxUzbekistanMapComponent {
     this.lastSelectedDistrict = undefined;
     this.lastSelectedProvince = undefined;
     this.svg.style.transform = `translate(${0}px, ${0}px)`;
-    this.svg.style.scale = `${1.5}`;
+    this.svg.style.scale = `${this.scale}`;
     this.setPathsStrokeWidth('revert-layer');
   }
 
