@@ -142,10 +142,6 @@ export class NgxUzbekistanMapComponent implements AfterViewInit {
   }
 
   private onSelectProvinceOrDistrict(path: SVGPathElement) {
-    if (this.permission === 'district' && this.provinceOrDistrictId) {
-      return;
-    }
-
     const { title, type, name_uz, name_uzl, name_ru } = path.dataset;
     const id = path.id;
     console.log('id', id);
@@ -154,6 +150,10 @@ export class NgxUzbekistanMapComponent implements AfterViewInit {
     console.log('name_uz', name_uz);
     console.log('name_uzl', name_uzl);
     console.log('name_ru', name_ru);
+
+    if (this.permission === 'district' && this.provinceOrDistrictId !== id) {
+      return;
+    }
 
     //#region WHEN CLICKED PROVINCE
     if (type === 'province') {
@@ -232,6 +232,22 @@ export class NgxUzbekistanMapComponent implements AfterViewInit {
     for (let index = 0; index < paths.length; index++) {
       const element = paths[index];
       element.style.strokeWidth = `${strokeWidth}`;
+    }
+  }
+
+  strictMode(
+    provinceOrDistrictId: string,
+    permission: 'full' | 'province' | 'district'
+  ) {
+    this.provinceOrDistrictId = provinceOrDistrictId;
+    this.permission = permission;
+    switch (permission) {
+      case 'district':
+        this.svg.classList.add('permission-district');
+        break;
+      case 'province':
+        this.svg.classList.add('permission-province');
+        break;
     }
   }
 

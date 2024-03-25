@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  ViewChild,
+} from '@angular/core';
 // import {
 //   NgxUzbekistanMapLeafletComponent,
 //   NgxUzbekistanMapComponent,
@@ -14,8 +19,6 @@ import { NgxUzbekistanMapLeafletComponent } from '../../../../projects/ngx-uzbek
     <div style="height: 100vh">
       <ngx-uzbekistan-map
         #uzbekistanMap
-        [defaultProvinceOrDistrictId]="'00s0eed0000region000174'"
-        [permission]="'full'"
         (onSelectedProvince)="handleSelectedProvince($event)"
         (onSelectedDistrict)="handleSelectedDistrict($event)"
         (onSelectedUzbekistan)="handleSelectedUzbekistan()"
@@ -32,7 +35,9 @@ import { NgxUzbekistanMapLeafletComponent } from '../../../../projects/ngx-uzbek
   styleUrl: './sample.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SampleComponent {
+export class SampleComponent implements AfterViewInit {
+  @ViewChild('uzbekistanMap') uzbekistanMap!: NgxUzbekistanMapComponent;
+
   handleSelectedProvince(e: any) {
     console.log(e);
   }
@@ -43,5 +48,9 @@ export class SampleComponent {
 
   handleSelectedUzbekistan() {
     console.log('uzbekistan selected');
+  }
+
+  ngAfterViewInit(): void {
+    this.uzbekistanMap.strictMode('00s0eed0000region000174', 'district');
   }
 }
