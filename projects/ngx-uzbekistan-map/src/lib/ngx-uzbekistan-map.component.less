@@ -58,9 +58,31 @@ svg {
     fill: #f00;
   }
 
-  &:active {
-    cursor: grabbing;
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
+  // TODO: REMOVE OR IMPLEMENT
+  // &:active {
+  //   cursor: grabbing;
+  //   cursor: -moz-grabbing;
+  //   cursor: -webkit-grabbing;
+  // }
+
+  &.permission-province {
+    path[data-type="province"] {
+      fill: #cdd4ff;
+      cursor: not-allowed;
+    }
+  }
+
+  &.permission-district {
+    path[data-type="province"] {
+      fill: #cdd4ff;
+      cursor: not-allowed;
+    }
+
+    path[data-type="district"] {
+      &:not(.active-district) {
+        fill: #f0e68c;
+        cursor: not-allowed;
+      }
+    }
   }
 }

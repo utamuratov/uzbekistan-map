@@ -1,5 +1,6 @@
 import { CdkDrag } from '@angular/cdk/drag-drop';
 import {
+  AfterViewInit,
   Component,
   ElementRef,
   EventEmitter,
@@ -21,32 +22,40 @@ import { IArea } from './models/area.interface';
   standalone: true,
   imports: [CdkDrag, MatTooltipModule, WheelProDirective],
 })
-export class NgxUzbekistanMapComponent {
+export class NgxUzbekistanMapComponent implements AfterViewInit {
   @ViewChild('svgMap') svgElementRef!: ElementRef;
 
   private _provinceOrDistrictId: string | undefined;
   public get provinceOrDistrictId(): string | undefined {
     return this._provinceOrDistrictId;
   }
-  @Input()
   public set provinceOrDistrictId(v: string | undefined) {
-    this._provinceOrDistrictId = v;
-
-    if (this.provinceOrDistrictId) {
-      const path = this.document.getElementById(this.provinceOrDistrictId);
+    if (v === undefined) {
+      this.onSelectUzbekistan();
+    } else {
+      const path = this.document.getElementById(v);
       if (path instanceof SVGPathElement) {
         this.onSelectProvinceOrDistrict(path);
       }
-      return;
     }
 
-    if (v === undefined) {
-      this.onSelectUzbekistan();
-    }
+    this._provinceOrDistrictId = v;
   }
 
   @Input()
   scale = '1.5';
+
+  /**
+   * If this property is set, the map will be in strict mode. You can not select any province or district.
+   */
+  @Input()
+  permission: 'full' | 'province' | 'district' = 'full';
+
+  @Input()
+  defaultProvinceOrDistrictId: string | undefined;
+
+  @Input()
+  zoomForDistrict = false;
 
   @Output()
   onSelectedProvince = new EventEmitter<IArea>();
@@ -85,7 +94,9 @@ export class NgxUzbekistanMapComponent {
     this._lastSelectedDistrictPath = v;
   }
 
-  dragging = false;
+  // TODO: REMOV OR IMPLEMENT
+  // dragging = false;
+
   lastSelectedProvince?: IArea;
   lastSelectedDistrict?: IArea;
 
@@ -93,11 +104,12 @@ export class NgxUzbekistanMapComponent {
 
   @HostListener('click', ['$event'])
   onClick(event: MouseEvent) {
-    // IF DRAGGING, DO NOTHING
-    if (this.dragging) {
-      this.dragging = false;
-      return;
-    }
+    // TODO: REMOV OR IMPLEMENT
+    // // IF DRAGGING, DO NOTHING
+    // if (this.dragging) {
+    //   this.dragging = false;
+    //   return;
+    // }
 
     const target = event.target;
     if (target instanceof SVGPathElement) {
@@ -113,6 +125,10 @@ export class NgxUzbekistanMapComponent {
   }
 
   private onSelectUzbekistan() {
+    if (this.permission !== 'full') {
+      return;
+    }
+
     if (this.lastSelectedProvincePath || this.lastSelectedDistrictPath) {
       this.onSelectedUzbekistan.emit();
     }
@@ -126,6 +142,10 @@ export class NgxUzbekistanMapComponent {
   }
 
   private onSelectProvinceOrDistrict(path: SVGPathElement) {
+    if (this.permission === 'district' && this.provinceOrDistrictId) {
+      return;
+    }
+
     const { title, type, name_uz, name_uzl, name_ru } = path.dataset;
     const id = path.id;
     console.log('id', id);
@@ -135,8 +155,12 @@ export class NgxUzbekistanMapComponent {
     console.log('name_uzl', name_uzl);
     console.log('name_ru', name_ru);
 
-    // WHEN CLICKED PROVINCE
+    //#region WHEN CLICKED PROVINCE
     if (type === 'province') {
+      if (this.permission === 'province' && this.provinceOrDistrictId) {
+        return;
+      }
+
       // REMOVE ACTIVE DISTRICT
       this.lastSelectedDistrictPath = undefined;
 
@@ -152,12 +176,33 @@ export class NgxUzbekistanMapComponent {
       this.onSelectedProvince.emit(this.lastSelectedProvince);
       return;
     }
+    //#endregion
 
-    // WHEN CLICKED DISTRICT
+    //#region WHEN CLICKED DISTRICT
+
+    // HIDE PROVINCE OF SELECTED DISTRICT
+    const regionPath =
+      path.parentElement?.nextSibling || path.parentElement?.previousSibling;
+    if (regionPath instanceof SVGPathElement) {
+      this.lastSelectedProvincePath = regionPath;
+
+      // ZOOM AND MOVE TO SELECTED PROVINCE
+      this.moveToCenter(regionPath);
+
+      regionPath.style.display = 'none';
+    }
+
     this.lastSelectedDistrictPath = path;
+
+    // ZOOM AND MOVE TO SELECTED DISTRICT
+    if (this.zoomForDistrict) {
+      this.moveToCenter(path);
+    }
+
     path.classList.add('active-district');
     this.lastSelectedDistrict = { id, name_ru, name_uzl, name_uz } as IArea;
     this.onSelectedDistrict.emit(this.lastSelectedDistrict);
+    //#endregion
   }
 
   private moveToCenter(clickedPath: SVGPathElement) {
@@ -187,6 +232,20 @@ export class NgxUzbekistanMapComponent {
     for (let index = 0; index < paths.length; index++) {
       const element = paths[index];
       element.style.strokeWidth = `${strokeWidth}`;
+    }
+  }
+
+  ngAfterViewInit(): void {
+    if (this.defaultProvinceOrDistrictId) {
+      this.provinceOrDistrictId = this.defaultProvinceOrDistrictId;
+      switch (this.permission) {
+        case 'district':
+          this.svg.classList.add('permission-district');
+          break;
+        case 'province':
+          this.svg.classList.add('permission-province');
+          break;
+      }
     }
   }
 }

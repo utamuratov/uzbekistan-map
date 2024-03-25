@@ -1,6 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NgxUzbekistanMapLeafletComponent } from 'ngx-uzbekistan-map';
+// import {
+//   NgxUzbekistanMapLeafletComponent,
+//   NgxUzbekistanMapComponent,
+// } from 'ngx-uzbekistan-map';
 import { NgxUzbekistanMapComponent } from '../../../../projects/ngx-uzbekistan-map/src/lib/ngx-uzbekistan-map.component';
+import { NgxUzbekistanMapLeafletComponent } from '../../../../projects/ngx-uzbekistan-map/src/lib/uzbekistan-map-leaflet/ngx-uzbekistan-map-leaflet.component';
 
 @Component({
   selector: 'app-sample',
@@ -10,6 +14,8 @@ import { NgxUzbekistanMapComponent } from '../../../../projects/ngx-uzbekistan-m
     <div style="height: 100vh">
       <ngx-uzbekistan-map
         #uzbekistanMap
+        [defaultProvinceOrDistrictId]="'00s0eed0000region000174'"
+        [permission]="'full'"
         (onSelectedProvince)="handleSelectedProvince($event)"
         (onSelectedDistrict)="handleSelectedDistrict($event)"
         (onSelectedUzbekistan)="handleSelectedUzbekistan()"
