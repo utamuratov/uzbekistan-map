@@ -4,8 +4,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 
 import { JsonPipe } from '@angular/common';
-import { ERegionIds, REGIONS_DATA } from '../../config/regions.constant';
-import { DISTRICTS_BY_REGION } from '../../config/districts.constant';
+import {
+  DISTRICTS_BY_REGION,
+  ERegionIds,
+  REGIONS_DATA,
+} from '../../../../projects/ngx-uzbekistan-map/src/public-api';
 
 type AreaType = 'province' | 'district';
 

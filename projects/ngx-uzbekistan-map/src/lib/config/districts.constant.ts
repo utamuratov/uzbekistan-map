@@ -1266,11 +1266,11 @@ export const DISTRICTS_BY_REGION: Record<ERegionIds, IArea[]> = {
       name_uzl: 'Qoʻshtepa tumani',
     },
     {
-      id: '00s0eed0000region000109',
+      id: '00s0eed0000region000126',
       parent_id: '00s0eed0000region000012',
-      name_uz: 'Фарғона шаҳри',
-      name_ru: 'город Фергана',
-      name_uzl: 'Fargʻona shahri',
+      name_uz: 'Фарғона тумани',
+      name_ru: 'Ферганский район',
+      name_uzl: 'Fargʻona tumani',
     },
     {
       id: '00s0eed0000region000112',
@@ -1280,11 +1280,11 @@ export const DISTRICTS_BY_REGION: Record<ERegionIds, IArea[]> = {
       name_uzl: 'Margʻilon shahri',
     },
     {
-      id: '00s0eed0000region000126',
+      id: '00s0eed0000region000109',
       parent_id: '00s0eed0000region000012',
-      name_uz: 'Фарғона тумани',
-      name_ru: 'Ферганский район',
-      name_uzl: 'Fargʻona tumani',
+      name_uz: 'Фарғона шаҳри',
+      name_ru: 'город Фергана',
+      name_uzl: 'Fargʻona shahri',
     },
     {
       id: '00s0eed0000region000110',

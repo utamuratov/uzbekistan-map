@@ -40,6 +40,9 @@ svg {
   path {
     fill: #303f9f;
     cursor: pointer;
+    &:hover {
+      fill: #6e81ff;
+    }
     // transition: stroke-width 500ms linear !important;
 
     // TODO: REMOVE OR IMPLEMENT
@@ -52,10 +55,13 @@ svg {
 
   path[data-type="district"] {
     fill: #e5c100;
+    &:hover {
+      fill: #f0e68c;
+    }
   }
 
   path.active-district {
-    fill: #f00;
+    fill: #f00 !important;
   }
 
   // TODO: REMOVE OR IMPLEMENT

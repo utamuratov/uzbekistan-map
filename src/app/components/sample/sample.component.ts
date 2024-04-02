@@ -51,6 +51,7 @@ export class SampleComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.uzbekistanMap.strictMode('00s0eed0000region000174', 'district');
+    // *FOR SELECT DISTRICT WITH STRICT MODE
+    // this.uzbekistanMap.strictMode('00s0eed0000region000174', 'district');
   }
 }
