@@ -1,17 +1,17 @@
 import { Component, EventEmitter, Inject, Input, Output } from '@angular/core';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { DOCUMENT } from '@angular/common';
 import { IArea } from './../models/area.interface';
 
 import * as L from 'leaflet';
 import { SVGString } from './data/_svg';
+import { CustomTooltipDirective } from '../directives/custom-tooltip.directive';
 
 @Component({
   selector: 'ngx-uzbekistan-map-leaflet',
   templateUrl: 'ngx-uzbekistan-map-leaflet.component.html',
   styleUrls: ['ngx-uzbekistan-map-leaflet.component.less'],
   standalone: true,
-  imports: [MatTooltipModule],
+  imports: [CustomTooltipDirective],
 })
 export class NgxUzbekistanMapLeafletComponent {
   private _provinceOrDistrictId: string | undefined;

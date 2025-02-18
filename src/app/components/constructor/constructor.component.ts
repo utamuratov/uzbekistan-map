@@ -1,7 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
 import { MapComponent } from '../map/map.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
 
 import { JsonPipe } from '@angular/common';
 import {
@@ -15,7 +13,7 @@ type AreaType = 'province' | 'district';
 @Component({
   selector: 'em-constructor',
   standalone: true,
-  imports: [JsonPipe, MatButtonModule, MatInputModule, MapComponent],
+  imports: [JsonPipe, MapComponent],
   template: `
     <div class="flex">
       <button (click)="doIt()" mat-stroked-button>DO IT</button>
@@ -26,7 +24,6 @@ type AreaType = 'province' | 'district';
       </div>
 
       <textarea
-        mat-input
         name=""
         id=""
         cols="50"
@@ -34,7 +31,6 @@ type AreaType = 'province' | 'district';
         [value]="REGIONS | json"
       ></textarea>
       <textarea
-        mat-input
         name=""
         id=""
         cols="50"
@@ -42,14 +38,7 @@ type AreaType = 'province' | 'district';
         [value]="DISTRICTS | json"
       ></textarea>
     </div>
-    <textarea
-      mat-input
-      name=""
-      id=""
-      cols="100"
-      rows="10"
-      [value]="newSvg"
-    ></textarea>
+    <textarea name="" id="" cols="100" rows="10" [value]="newSvg"></textarea>
   `,
   styleUrls: ['./constructor.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,

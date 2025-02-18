@@ -10,17 +10,17 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { WheelProDirective } from './directives/wheel-pro.directive';
 import { DOCUMENT } from '@angular/common';
 import { IArea } from './models/area.interface';
+import { CustomTooltipDirective } from './directives/custom-tooltip.directive';
 
 @Component({
   selector: 'ngx-uzbekistan-map',
   templateUrl: 'ngx-uzbekistan-map.component.html',
   styleUrls: ['ngx-uzbekistan-map.component.less'],
   standalone: true,
-  imports: [CdkDrag, MatTooltipModule, WheelProDirective],
+  imports: [CustomTooltipDirective],
 })
 export class NgxUzbekistanMapComponent implements AfterViewInit {
   @ViewChild('svgMap') svgElementRef!: ElementRef;
