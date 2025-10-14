@@ -10,11 +10,12 @@ import {
 // } from 'ngx-uzbekistan-map';
 import { NgxUzbekistanMapComponent } from '../../../../projects/ngx-uzbekistan-map/src/lib/ngx-uzbekistan-map.component';
 import { NgxUzbekistanMapLeafletComponent } from '../../../../projects/ngx-uzbekistan-map/src/lib/uzbekistan-map-leaflet/ngx-uzbekistan-map-leaflet.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sample',
   standalone: true,
-  imports: [NgxUzbekistanMapComponent, NgxUzbekistanMapLeafletComponent],
+  imports: [NgxUzbekistanMapComponent],
   template: `
     <div style="height: 100vh">
       <ngx-uzbekistan-map
@@ -23,13 +24,6 @@ import { NgxUzbekistanMapLeafletComponent } from '../../../../projects/ngx-uzbek
         (onSelectedDistrict)="handleSelectedDistrict($event)"
         (onSelectedUzbekistan)="handleSelectedUzbekistan()"
       ></ngx-uzbekistan-map>
-
-      <ngx-uzbekistan-map-leaflet
-        #uzbekistanMapLeaflet
-        (onSelectedProvince)="handleSelectedProvince($event)"
-        (onSelectedDistrict)="handleSelectedDistrict($event)"
-        (onSelectedUzbekistan)="handleSelectedUzbekistan()"
-      ></ngx-uzbekistan-map-leaflet>
     </div>
   `,
   styleUrl: './sample.component.css',

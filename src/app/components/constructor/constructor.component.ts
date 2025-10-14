@@ -15,30 +15,36 @@ type AreaType = 'province' | 'district';
   standalone: true,
   imports: [JsonPipe, MapComponent],
   template: `
-    <div class="flex">
-      <button (click)="doIt()" mat-stroked-button>DO IT</button>
-    </div>
-    <div class="flex gap-2 p-4">
-      <div class="border p-4">
-        <em-map></em-map>
-      </div>
+    <div class="container">
+      <div class="content">
+        <div class="map-section">
+          <button (click)="doIt()" class="action-btn">DO IT</button>
+          <em-map></em-map>
+          <div class="textarea-wrapper">
+            <textarea
+              class="textarea wide"
+              [value]="newSvg"
+              readonly
+            ></textarea>
+            <button class="copy-btn" (click)="copyToClipboard(newSvg)">
+              Copy
+            </button>
+          </div>
+        </div>
 
-      <textarea
-        name=""
-        id=""
-        cols="50"
-        rows="10"
-        [value]="REGIONS | json"
-      ></textarea>
-      <textarea
-        name=""
-        id=""
-        cols="50"
-        rows="10"
-        [value]="DISTRICTS | json"
-      ></textarea>
+        <textarea
+          class="textarea medium"
+          [value]="REGIONS | json"
+          readonly
+        ></textarea>
+
+        <textarea
+          class="textarea medium"
+          [value]="DISTRICTS | json"
+          readonly
+        ></textarea>
+      </div>
     </div>
-    <textarea name="" id="" cols="100" rows="10" [value]="newSvg"></textarea>
   `,
   styleUrls: ['./constructor.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -69,7 +75,7 @@ export class ConstructorComponent {
         regionSvgPath.setAttribute('data-name_ru', region.name_ru);
         regionSvgPath.setAttribute('data-type', 'province' as AreaType);
         // SET TOOLTIP
-        regionSvgPath.setAttribute('matTooltip', region.name_uz);
+        regionSvgPath.setAttribute('appCustomTooltip', region.name_uz);
 
         const districtsByRegion = DISTRICTS_BY_REGION[region.id as ERegionIds];
         for (
@@ -89,7 +95,7 @@ export class ConstructorComponent {
             districtSvgPath.setAttribute('data-name_ru', district.name_ru);
             districtSvgPath.setAttribute('data-type', 'district' as AreaType);
             // SET TOOLTIP
-            districtSvgPath.setAttribute('matTooltip', district.name_uz);
+            districtSvgPath.setAttribute('appCustomTooltip', district.name_uz);
           }
         }
       }
@@ -97,5 +103,18 @@ export class ConstructorComponent {
       this.newSvg = map.outerHTML;
       console.log(map);
     }
+  }
+
+  copyToClipboard(value: string): void {
+    if (!value) return;
+
+    navigator.clipboard
+      .writeText(value)
+      .then(() => {
+        console.log('Copied to clipboard');
+      })
+      .catch((err) => {
+        console.error('Copy failed:', err);
+      });
   }
 }

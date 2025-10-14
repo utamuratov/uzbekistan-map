@@ -80,8 +80,17 @@ export class NgxUzbekistanMapLeafletComponent {
   lastSelectedDistrict?: IArea;
 
   private map!: L.Map;
-  readonly LEAFLET_DEFAULT_CENTER = [23.8282, -114.9795] as L.LatLngExpression;
-  readonly LEAFLET_DEFAULT_ZOOM = 5;
+  private svgOverlay!: L.SVGOverlay;
+
+  // Uzbekiston uchun haqiqiy koordinatalar
+  readonly LEAFLET_DEFAULT_CENTER = [41.3, 64.5] as L.LatLngExpression;
+  readonly LEAFLET_DEFAULT_ZOOM = 6;
+
+  // Debounce timer
+  private strokeWidthTimer: any;
+
+  // Tooltip element
+  private tooltipElement!: HTMLDivElement;
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
@@ -93,11 +102,16 @@ export class NgxUzbekistanMapLeafletComponent {
     this.lastSelectedProvincePath = undefined;
     this.lastSelectedDistrict = undefined;
     this.lastSelectedProvince = undefined;
+
     if (!isClickedLeaflet) {
-      this.svg.style.transform = `translate(${0}px, ${0}px)`;
-      this.svg.style.scale = `${1.5}`;
+      // Smooth animation bilan default view ga qaytish
+      this.map.flyTo(this.LEAFLET_DEFAULT_CENTER, this.LEAFLET_DEFAULT_ZOOM, {
+        duration: 0.5,
+        easeLinearity: 0.5,
+      });
     }
-    this.setPathsStrokeWidth('revert-layer');
+
+    this.updateStrokeWidth();
   }
 
   private onSelectProvinceOrDistrict(
@@ -106,27 +120,16 @@ export class NgxUzbekistanMapLeafletComponent {
   ) {
     const { title, type, name_uz, name_uzl, name_ru } = path.dataset;
     const id = path.id;
-    console.log('id', id);
-    console.log('title', title);
-    console.log('type', type);
-    console.log('name_uz', name_uz);
-    console.log('name_uzl', name_uzl);
-    console.log('name_ru', name_ru);
 
     // WHEN CLICKED PROVINCE
     if (type === 'province') {
       // REMOVE ACTIVE DISTRICT
       this.lastSelectedDistrictPath = undefined;
-
       this.lastSelectedProvincePath = path;
 
       if (leafletMouseEvent) {
-        // ON LEAFLET CLICK
+        // ON LEAFLET CLICK - smooth zoom va pan
         this.setView(path, leafletMouseEvent.latlng);
-      } else {
-        // TODO: REMOVE OR IMPLEMENT
-        // ZOOM AND MOVE TO SELECTED PROVINCE
-        this.moveToCenter(path);
       }
 
       // HIDE SELECTED PROVINCE PATH
@@ -144,35 +147,36 @@ export class NgxUzbekistanMapLeafletComponent {
     this.onSelectedDistrict.emit(this.lastSelectedDistrict);
   }
 
-  private moveToCenter(clickedPath: SVGPathElement) {
-    // const svgContainer = event.currentTarget as HTMLElement;
-    // const clickedPath = event.target as SVGPathElement;
-    // Get the bounding box of the clicked path
-    const bbox = clickedPath.getBBox();
+  /**
+   * Stroke width ni zoom level ga qarab yangilash (debounced)
+   */
+  private updateStrokeWidth() {
+    clearTimeout(this.strokeWidthTimer);
+    this.strokeWidthTimer = setTimeout(() => {
+      const zoom = this.map.getZoom();
+      // Zoom level ga qarab stroke width ni hisoblash (ingichka)
+      // Yuqori zoom da yanada ingichka
+      const baseWidth = 0.8;
+      const zoomFactor = Math.pow(2, zoom - this.LEAFLET_DEFAULT_ZOOM);
+      const strokeWidth = Math.max(0.15, baseWidth / zoomFactor);
 
-    // Calculate the translation required to center the path
-    const tx = this.svg.clientWidth / 2 - (bbox.x + bbox.width / 2);
-    const ty = this.svg.clientHeight / 2 - (bbox.y + bbox.height / 2);
-
-    // Apply the translation to the SVG container
-    const scale = this.svg.clientHeight / bbox.height;
-    // TODO: REMOVE OR IMPLEMENT
-    // this.svg.style.transform = `translate(${tx}px, ${ty}px)`;
-    // this.svg.style.transitionDuration = Math.ceil(scale / 10) * 0.2 + 's';
-    // this.svg.style.scale = `${scale}`;
-    this.setPathsStrokeWidth(`${1 / scale}px`);
+      this.setPathsStrokeWidth(`${strokeWidth}px`);
+    }, 100);
   }
 
   /**
-   *
-   * @param strokeWidth 0.2px | 'revert-layer'
+   * Barcha path elementlarning stroke width ni o'zgartirish
    */
   private setPathsStrokeWidth(strokeWidth: string) {
-    const paths = this.svg.getElementsByTagName('path');
-    for (let index = 0; index < paths.length; index++) {
-      const element = paths[index];
-      element.style.strokeWidth = `${strokeWidth}`;
-    }
+    if (!this.svg) return;
+
+    // requestAnimationFrame bilan performance yaxshilash
+    requestAnimationFrame(() => {
+      const paths = this.svg.getElementsByTagName('path');
+      for (let i = 0; i < paths.length; i++) {
+        paths[i].style.strokeWidth = strokeWidth;
+      }
+    });
   }
 
   private initMap(): void {
@@ -180,70 +184,280 @@ export class NgxUzbekistanMapLeafletComponent {
       center: this.LEAFLET_DEFAULT_CENTER,
       zoom: this.LEAFLET_DEFAULT_ZOOM,
       attributionControl: false,
+      zoomControl: true, // Zoom buttonlarni yoqish
+      scrollWheelZoom: true, // Mouse wheel zoom
+      doubleClickZoom: true, // Double click zoom
+      touchZoom: true, // Touch zoom
+      boxZoom: true, // Box zoom
+      keyboard: true, // Keyboard navigation
+      dragging: true, // Drag/pan
+      zoomSnap: 0.5, // Smooth zoom uchun
+      zoomDelta: 0.5, // Zoom qadamlari
+      wheelPxPerZoomLevel: 100, // Mouse wheel sensitivity
+      zoomAnimation: true,
+      zoomAnimationThreshold: 4,
+      fadeAnimation: true,
+      markerZoomAnimation: true,
+      // Performance optimizatsiyasi
+      preferCanvas: false, // SVG uchun false
+      renderer: L.svg({ padding: 0.5 }),
     });
 
     this.setSvgOverlay();
 
+    // Click event - optimized
     this.map.on('click', (e) => {
       const target = e.originalEvent?.target;
       if (target instanceof SVGPathElement) {
-        // Calculate the translation required to center the path
-
         this.onSelectProvinceOrDistrict(target, e);
       } else {
         // WHEN CLICKED OUTSIDE (NOT DISTRICT OR PROVINCE)
-        this.map.setView(
-          this.LEAFLET_DEFAULT_CENTER,
-          this.LEAFLET_DEFAULT_ZOOM,
-          {
-            animate: true,
-            duration: 0.2,
-          }
-        );
-
+        this.map.flyTo(this.LEAFLET_DEFAULT_CENTER, this.LEAFLET_DEFAULT_ZOOM, {
+          duration: 0.5,
+          easeLinearity: 0.5,
+        });
         this.onSelectUzbekistan(true);
       }
     });
+
+    // Zoom event - stroke width ni yangilash
+    this.map.on('zoomend', () => {
+      this.updateStrokeWidth();
+    });
+
+    // Zoom animatsiyasi boshlanganida
+    this.map.on('zoomanim', () => {
+      this.updateStrokeWidth();
+    });
+
+    // Initial stroke width
+    this.updateStrokeWidth();
   }
 
   private setSvgOverlay() {
-    var latLngBounds = L.latLngBounds([
-      [32, -130],
-      [13, -100],
+    // Uzbekiston uchun haqiqiy geografik chegaralar
+    const latLngBounds = L.latLngBounds([
+      [37.2, 55.9], // Janubi-g'arbiy burchak
+      [45.6, 73.2], // Shimoli-sharqiy burchak
     ]);
+
     this.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     this.svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
     this.svg.setAttribute('viewBox', '0 0 466 304');
     this.svg.setAttribute('id', 'svgMap');
+
+    // Performance uchun
+    this.svg.style.pointerEvents = 'auto';
+    this.svg.style.transform = 'translateZ(0)'; // GPU acceleration
+
     this.svg.innerHTML = SVGString;
-    L.svgOverlay(this.svg, latLngBounds as any).addTo(this.map);
+
+    // Tooltip yaratish
+    this.createTooltip();
+
+    // Hover eventlarni qo'shish
+    this.addHoverEvents();
+
+    // SVG overlay yaratish
+    this.svgOverlay = L.svgOverlay(this.svg, latLngBounds, {
+      interactive: true, // Click eventlarni yoqish
+      bubblingMouseEvents: true, // Event propagation
+    });
+
+    this.svgOverlay.addTo(this.map);
   }
 
   private setView(path: SVGPathElement, latLng: L.LatLngExpression) {
     const bbox = path.getBBox();
-    // Apply the translation to the SVG container
-    const scale =
-      this.document.getElementById('map')!.clientHeight / bbox.height;
-    this.setPathsStrokeWidth(`${1 / scale}px`);
-    // this.map.setZoom(scale / 3);
-    let zoom = 6;
-    if (scale < 10) {
-      zoom = 6;
-    } else if (scale < 50) {
+    const mapContainer = this.document.getElementById('map');
+
+    if (!mapContainer) return;
+
+    // Map container o'lchamlarini olish
+    const mapWidth = mapContainer.clientWidth;
+    const mapHeight = mapContainer.clientHeight;
+
+    // Path o'lchamlarini olish
+    const pathWidth = bbox.width;
+    const pathHeight = bbox.height;
+
+    // Ikkala yo'nalish bo'yicha scale hisoblash
+    const scaleX = mapWidth / pathWidth;
+    const scaleY = mapHeight / pathHeight;
+
+    // Kichikroq scale ni tanlash (to'liq ko'rinishi uchun)
+    const scale = Math.min(scaleX, scaleY) * 0.6; // 0.6 - padding uchun
+
+    // Scale ga asoslangan zoom level hisoblash
+    let zoom: number;
+
+    if (scale < 5) {
+      zoom = 7;
+    } else if (scale < 15) {
       zoom = 8;
-    } else if (scale < 100) {
+    } else if (scale < 30) {
       zoom = 9;
-    } else {
+    } else if (scale < 60) {
       zoom = 10;
+    } else if (scale < 120) {
+      zoom = 11;
+    } else {
+      zoom = 12;
     }
 
-    this.map.setView(latLng, zoom, {
-      animate: true,
-      duration: 0.2,
+    // Juda kichik hududlar uchun (Toshkent shahri kabi)
+    if (pathWidth < 10 && pathHeight < 10) {
+      zoom = Math.max(zoom, 11); // Minimum zoom 11
+    } else if (pathWidth < 20 && pathHeight < 20) {
+      zoom = Math.max(zoom, 10); // Minimum zoom 10
+    }
+
+    console.log(
+      'Path size:',
+      pathWidth,
+      'x',
+      pathHeight,
+      'Scale:',
+      scale.toFixed(2),
+      'Zoom:',
+      zoom
+    );
+
+    // Smooth animation bilan zoom va pan
+    this.map.flyTo(latLng, zoom, {
+      duration: 0.6,
+      easeLinearity: 0.5,
     });
   }
 
+  /**
+   * Tooltip elementi yaratish
+   */
+  private createTooltip() {
+    this.tooltipElement = this.document.createElement('div');
+    this.tooltipElement.className = 'map-custom-tooltip';
+    this.tooltipElement.style.cssText = `
+      position: absolute;
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      pointer-events: none;
+      z-index: 1000;
+      display: none;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: opacity 0.2s ease;
+    `;
+    this.document.body.appendChild(this.tooltipElement);
+  }
+
+  /**
+   * Hover eventlarni barcha path elementlarga qo'shish
+   */
+  private addHoverEvents() {
+    const paths = this.svg.getElementsByTagName('path');
+
+    for (let i = 0; i < paths.length; i++) {
+      const path = paths[i];
+
+      // Mouse enter
+      path.addEventListener('mouseenter', (e) => {
+        const target = e.target as SVGPathElement;
+        const tooltipText =
+          target.dataset['tooltip'] ||
+          target.dataset['name_uz'] ||
+          target.dataset['title'] ||
+          '';
+
+        if (tooltipText) {
+          this.showTooltip(tooltipText);
+          // Path ni highlight qilish
+          target.style.opacity = '0.8';
+        }
+      });
+
+      // Mouse move - tooltip pozitsiyasini yangilash
+      path.addEventListener('mousemove', (e) => {
+        this.updateTooltipPosition(e as MouseEvent);
+      });
+
+      // Mouse leave
+      path.addEventListener('mouseleave', (e) => {
+        const target = e.target as SVGPathElement;
+        this.hideTooltip();
+        // Highlight ni olib tashlash
+        target.style.opacity = '';
+      });
+    }
+  }
+
+  /**
+   * Tooltip ni ko'rsatish
+   */
+  private showTooltip(text: string) {
+    this.tooltipElement.textContent = text;
+    this.tooltipElement.style.display = 'block';
+    // Smooth appear
+    setTimeout(() => {
+      this.tooltipElement.style.opacity = '1';
+    }, 10);
+  }
+
+  /**
+   * Tooltip ni yashirish
+   */
+  private hideTooltip() {
+    this.tooltipElement.style.display = 'none';
+    this.tooltipElement.style.opacity = '0';
+  }
+
+  /**
+   * Tooltip pozitsiyasini yangilash
+   */
+  private updateTooltipPosition(event: MouseEvent) {
+    const offset = 15; // Cursor dan masofa
+    const tooltipWidth = this.tooltipElement.offsetWidth;
+    const tooltipHeight = this.tooltipElement.offsetHeight;
+
+    let left = event.clientX + offset;
+    let top = event.clientY + offset;
+
+    // Ekrandan chiqib ketmaslik uchun
+    if (left + tooltipWidth > window.innerWidth) {
+      left = event.clientX - tooltipWidth - offset;
+    }
+
+    if (top + tooltipHeight > window.innerHeight) {
+      top = event.clientY - tooltipHeight - offset;
+    }
+
+    this.tooltipElement.style.left = `${left}px`;
+    this.tooltipElement.style.top = `${top}px`;
+  }
+
   ngAfterViewInit(): void {
-    this.initMap();
+    // Leaflet kutubxonasi to'liq yuklanganini ta'minlash
+    setTimeout(() => {
+      this.initMap();
+    }, 0);
+  }
+
+  ngOnDestroy(): void {
+    // Memory leak oldini olish
+    if (this.strokeWidthTimer) {
+      clearTimeout(this.strokeWidthTimer);
+    }
+
+    // Tooltip ni o'chirish
+    if (this.tooltipElement && this.tooltipElement.parentNode) {
+      this.tooltipElement.parentNode.removeChild(this.tooltipElement);
+    }
+
+    if (this.map) {
+      this.map.remove();
+    }
   }
 }

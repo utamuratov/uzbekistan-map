@@ -80,3 +80,13 @@
   pointer-events: none;
   white-space: nowrap;
 }
+
+//
+#map {
+  will-change: transform;
+}
+
+#svgMap path {
+  will-change: stroke-width;
+  transition: stroke-width 0.1s ease-out;
+}

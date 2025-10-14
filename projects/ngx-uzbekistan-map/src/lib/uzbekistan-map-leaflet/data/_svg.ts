@@ -1,7 +1,3 @@
-// <svg
-// id="svgMap"
-// ...
-// </svg>
 export const SVGString = `
 <g _ngcontent-ng-c2692107163="" class="transition">
   <g _ngcontent-ng-c2692107163="">
@@ -23,7 +19,7 @@ export const SVGString = `
         data-name_uzl="Olmazor tumani"
         data-name_ru="Алмазарский район"
         data-type="district"
-        matTooltip="Олмазор тумани"
+        appCustomTooltip="Олмазор тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -42,7 +38,7 @@ export const SVGString = `
         data-name_uzl="Yunusobod tumani"
         data-name_ru="Юнусабадский район"
         data-type="district"
-        matTooltip="Юнусобод тумани"
+        appCustomTooltip="Юнусобод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -61,7 +57,7 @@ export const SVGString = `
         data-name_uzl="Shayxontohur tumani"
         data-name_ru="Шайхантохурский район"
         data-type="district"
-        matTooltip="Шайхонтоҳур тумани"
+        appCustomTooltip="Шайхонтоҳур тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -80,7 +76,7 @@ export const SVGString = `
         data-name_uzl="Uchtepa tumani"
         data-name_ru="Учтепинский район"
         data-type="district"
-        matTooltip="Учтепа тумани"
+        appCustomTooltip="Учтепа тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -99,7 +95,7 @@ export const SVGString = `
         data-name_uzl="Chilonzor tumani"
         data-name_ru="Чиланзарский район"
         data-type="district"
-        matTooltip="Чилонзор тумани"
+        appCustomTooltip="Чилонзор тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -118,7 +114,7 @@ export const SVGString = `
         data-name_uzl="Yakkasaroy tumani"
         data-name_ru="Яккасарайский район"
         data-type="district"
-        matTooltip="Яккасарой тумани"
+        appCustomTooltip="Яккасарой тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -137,7 +133,7 @@ export const SVGString = `
         data-name_uzl="Sergeli tumani"
         data-name_ru="Сергелинсий район"
         data-type="district"
-        matTooltip="Сергели тумани"
+        appCustomTooltip="Сергели тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -156,7 +152,7 @@ export const SVGString = `
         data-name_uzl="Yangihayot tumani"
         data-name_ru="Янгихаётский район"
         data-type="district"
-        matTooltip="Янгиҳаёт тумани"
+        appCustomTooltip="Янгиҳаёт тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -175,7 +171,7 @@ export const SVGString = `
         data-name_uzl="Mirobod tumani"
         data-name_ru="Мирабадский район"
         data-type="district"
-        matTooltip="Миробод тумани"
+        appCustomTooltip="Миробод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -194,7 +190,7 @@ export const SVGString = `
         data-name_uzl="Bektemir tumani"
         data-name_ru="Бектемирский район"
         data-type="district"
-        matTooltip="Бектемир тумани"
+        appCustomTooltip="Бектемир тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -213,7 +209,7 @@ export const SVGString = `
         data-name_uzl="Yashnobod tumani"
         data-name_ru="Яшнабадский район"
         data-type="district"
-        matTooltip="Яшнобод тумани"
+        appCustomTooltip="Яшнобод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -232,7 +228,7 @@ export const SVGString = `
         data-name_uzl="Mirzo Ulugʻbek tumani"
         data-name_ru="Мирзо-Улугбекский район"
         data-type="district"
-        matTooltip="Мирзо Улуғбек тумани"
+        appCustomTooltip="Мирзо Улуғбек тумани"
       ></path>
     </g>
     <path
@@ -252,7 +248,7 @@ export const SVGString = `
       data-name_uzl="Toshkent shahri"
       data-name_ru="Город Ташкент"
       data-type="province"
-      matTooltip="Тошкент шаҳри"
+      appCustomTooltip="Тошкент шаҳри"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -274,7 +270,7 @@ export const SVGString = `
         data-name_uzl="Yangiyoʻl tumani"
         data-name_ru="Янгиюльский район"
         data-type="district"
-        matTooltip="Янгийўл тумани"
+        appCustomTooltip="Янгийўл тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -293,7 +289,7 @@ export const SVGString = `
         data-name_uzl="Boʻstonliq tumani"
         data-name_ru="Бостанлыкский район"
         data-type="district"
-        matTooltip="Бўстонлиқ тумани"
+        appCustomTooltip="Бўстонлиқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -312,7 +308,7 @@ export const SVGString = `
         data-name_uzl="Zangiota tumani"
         data-name_ru="Зангиотинский района"
         data-type="district"
-        matTooltip="Зангиота тумани"
+        appCustomTooltip="Зангиота тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -331,7 +327,7 @@ export const SVGString = `
         data-name_uzl="Toshkent tumani"
         data-name_ru="Ташкентский район"
         data-type="district"
-        matTooltip="Тошкент тумани"
+        appCustomTooltip="Тошкент тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -350,7 +346,7 @@ export const SVGString = `
         data-name_uzl="Chinoz tumani"
         data-name_ru="Чиназский район"
         data-type="district"
-        matTooltip="Чиноз тумани"
+        appCustomTooltip="Чиноз тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -369,7 +365,7 @@ export const SVGString = `
         data-name_uzl="Quyi Chirchiq tumani"
         data-name_ru="Куйичирчикский район"
         data-type="district"
-        matTooltip="Қуйи Чирчиқ тумани"
+        appCustomTooltip="Қуйи Чирчиқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -388,7 +384,7 @@ export const SVGString = `
         data-name_uzl="Qibray tumani"
         data-name_ru="Кибрайский район"
         data-type="district"
-        matTooltip="Қибрай тумани"
+        appCustomTooltip="Қибрай тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -407,7 +403,7 @@ export const SVGString = `
         data-name_uzl="Yuqori Chirchiq tumani"
         data-name_ru="Юкоричирчикский район"
         data-type="district"
-        matTooltip="Юқори Чирчиқ тумани"
+        appCustomTooltip="Юқори Чирчиқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -426,7 +422,7 @@ export const SVGString = `
         data-name_uzl="Chirchiq shahri"
         data-name_ru="город Чирчик"
         data-type="district"
-        matTooltip="Чирчиқ шаҳри"
+        appCustomTooltip="Чирчиқ шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -445,7 +441,7 @@ export const SVGString = `
         data-name_uzl="Parkent tumani"
         data-name_ru="Паркентский район"
         data-type="district"
-        matTooltip="Паркент тумани"
+        appCustomTooltip="Паркент тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -464,7 +460,7 @@ export const SVGString = `
         data-name_uzl="Oʻrta Chirchiq tumani"
         data-name_ru="Уртачирчикский район"
         data-type="district"
-        matTooltip="Ўрта Чирчиқ тумани"
+        appCustomTooltip="Ўрта Чирчиқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -483,7 +479,7 @@ export const SVGString = `
         data-name_uzl="Oqqoʻrgʻon tumani"
         data-name_ru="Аккурганский район"
         data-type="district"
-        matTooltip="Оққўрғон тумани"
+        appCustomTooltip="Оққўрғон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -502,7 +498,7 @@ export const SVGString = `
         data-name_uzl="Nurafon tumani"
         data-name_ru="город Нурафшан"
         data-type="district"
-        matTooltip="Нурафон тумани"
+        appCustomTooltip="Нурафон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -521,7 +517,7 @@ export const SVGString = `
         data-name_uzl="Boʻka tumani"
         data-name_ru="Букинский район"
         data-type="district"
-        matTooltip="Бўка тумани"
+        appCustomTooltip="Бўка тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -540,7 +536,7 @@ export const SVGString = `
         data-name_uzl="Piskent tumani"
         data-name_ru="Пскентский район"
         data-type="district"
-        matTooltip="Пискент тумани"
+        appCustomTooltip="Пискент тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -559,7 +555,7 @@ export const SVGString = `
         data-name_uzl="Ohangaron tumani"
         data-name_ru="Ахангаранский район"
         data-type="district"
-        matTooltip="Оҳангарон тумани"
+        appCustomTooltip="Оҳангарон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -578,7 +574,7 @@ export const SVGString = `
         data-name_uzl="Olmaliq shahri"
         data-name_ru="город Алмалик"
         data-type="district"
-        matTooltip="Олмалиқ шаҳри"
+        appCustomTooltip="Олмалиқ шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -597,7 +593,7 @@ export const SVGString = `
         data-name_uzl="Angren shahri"
         data-name_ru="город Ангрен"
         data-type="district"
-        matTooltip="Ангрен шаҳри"
+        appCustomTooltip="Ангрен шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -616,7 +612,7 @@ export const SVGString = `
         data-name_uzl="Yangiyoʻl shahri"
         data-name_ru="город Янгиюль"
         data-type="district"
-        matTooltip="Янгийўл шаҳри"
+        appCustomTooltip="Янгийўл шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -635,7 +631,7 @@ export const SVGString = `
         data-name_uzl="Bekobod shahri"
         data-name_ru="город Бекабад"
         data-type="district"
-        matTooltip="Бекобод шаҳри"
+        appCustomTooltip="Бекобод шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -654,7 +650,7 @@ export const SVGString = `
         data-name_uzl="Bekobod tumani"
         data-name_ru="Бекободский район"
         data-type="district"
-        matTooltip="Бекобод тумани"
+        appCustomTooltip="Бекобод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -673,7 +669,7 @@ export const SVGString = `
         data-name_uzl="Oxangaron shahri"
         data-name_ru="город Ахангаран"
         data-type="district"
-        matTooltip="Охангарон шаҳри"
+        appCustomTooltip="Охангарон шаҳри"
       ></path>
     </g>
     <path
@@ -693,7 +689,7 @@ export const SVGString = `
       data-name_uzl="Toshkent viloyati"
       data-name_ru="Ташкентская область"
       data-type="province"
-      matTooltip="Тошкент вилояти"
+      appCustomTooltip="Тошкент вилояти"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -715,7 +711,7 @@ export const SVGString = `
         data-name_uzl="Ulugʻnor tumani"
         data-name_ru="Улугнорский район"
         data-type="district"
-        matTooltip="Улуғнор тумани"
+        appCustomTooltip="Улуғнор тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -734,7 +730,7 @@ export const SVGString = `
         data-name_uzl="Baliqchi tumani"
         data-name_ru="Балыкчинский район"
         data-type="district"
-        matTooltip="Балиқчи тумани"
+        appCustomTooltip="Балиқчи тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -753,7 +749,7 @@ export const SVGString = `
         data-name_uzl="Boʻz tumani"
         data-name_ru="Бустанский район"
         data-type="district"
-        matTooltip="Бўз тумани"
+        appCustomTooltip="Бўз тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -772,7 +768,7 @@ export const SVGString = `
         data-name_uzl="Shahrixon tumani"
         data-name_ru="Шахриханский район"
         data-type="district"
-        matTooltip="Шаҳрихон тумани"
+        appCustomTooltip="Шаҳрихон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -791,7 +787,7 @@ export const SVGString = `
         data-name_uzl="Asaka tumani"
         data-name_ru="Асакинский район"
         data-type="district"
-        matTooltip="Асака тумани"
+        appCustomTooltip="Асака тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -810,7 +806,7 @@ export const SVGString = `
         data-name_uzl="Izboskan tumani"
         data-name_ru="Избосканский район"
         data-type="district"
-        matTooltip="Избоскан тумани"
+        appCustomTooltip="Избоскан тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -829,7 +825,7 @@ export const SVGString = `
         data-name_uzl="Paxtaobod tumani"
         data-name_ru="Пахтаабадский район"
         data-type="district"
-        matTooltip="Пахтаобод тумани"
+        appCustomTooltip="Пахтаобод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -848,7 +844,7 @@ export const SVGString = `
         data-name_uzl="Marhamat tumani"
         data-name_ru="Мархаматский район"
         data-type="district"
-        matTooltip="Марҳамат тумани"
+        appCustomTooltip="Марҳамат тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -867,7 +863,7 @@ export const SVGString = `
         data-name_uzl="Oltinkoʻl tumani"
         data-name_ru="Олтинкульский район"
         data-type="district"
-        matTooltip="Олтинкўл тумани"
+        appCustomTooltip="Олтинкўл тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -886,7 +882,7 @@ export const SVGString = `
         data-name_uzl="Andijon shahri"
         data-name_ru="город Андижан"
         data-type="district"
-        matTooltip="Андижон шаҳри"
+        appCustomTooltip="Андижон шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -905,7 +901,7 @@ export const SVGString = `
         data-name_uzl="Buloqboshi tumani"
         data-name_ru="Булакбашинский район"
         data-type="district"
-        matTooltip="Булоқбоши тумани"
+        appCustomTooltip="Булоқбоши тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -924,7 +920,7 @@ export const SVGString = `
         data-name_uzl="Jalolquduq tumani"
         data-name_ru="Жалакудукский район"
         data-type="district"
-        matTooltip="Жалолқудуқ тумани"
+        appCustomTooltip="Жалолқудуқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -943,7 +939,7 @@ export const SVGString = `
         data-name_uzl="Qoʻrgʻontepa tumani"
         data-name_ru="Кургонтепинский район"
         data-type="district"
-        matTooltip="Қўрғонтепа тумани"
+        appCustomTooltip="Қўрғонтепа тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -962,7 +958,7 @@ export const SVGString = `
         data-name_uzl="Xonobod shahri"
         data-name_ru="город Ханабод"
         data-type="district"
-        matTooltip="Хонобод шаҳри"
+        appCustomTooltip="Хонобод шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -981,7 +977,7 @@ export const SVGString = `
         data-name_uzl="Xoʻjaobod tumani"
         data-name_ru="Хужаободский район"
         data-type="district"
-        matTooltip="Хўжаобод тумани"
+        appCustomTooltip="Хўжаобод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1000,7 +996,7 @@ export const SVGString = `
         data-name_uzl="Andijon tumani"
         data-name_ru="Андижанский район"
         data-type="district"
-        matTooltip="Андижон тумани"
+        appCustomTooltip="Андижон тумани"
       ></path>
     </g>
     <path
@@ -1018,7 +1014,7 @@ export const SVGString = `
       data-name_uzl="Andijon viloyati"
       data-name_ru="Андижанская область"
       data-type="province"
-      matTooltip="Андижон вилояти"
+      appCustomTooltip="Андижон вилояти"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -1040,7 +1036,7 @@ export const SVGString = `
         data-name_uzl="Romitan tumani"
         data-name_ru="Ромитанский район"
         data-type="district"
-        matTooltip="Ромитан тумани"
+        appCustomTooltip="Ромитан тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1059,7 +1055,7 @@ export const SVGString = `
         data-name_uzl="Qorakoʻl tumani"
         data-name_ru="Каракульский район"
         data-type="district"
-        matTooltip="Қоракўл тумани"
+        appCustomTooltip="Қоракўл тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1078,7 +1074,7 @@ export const SVGString = `
         data-name_uzl="Olot tumani"
         data-name_ru="Олотский района"
         data-type="district"
-        matTooltip="Олот тумани"
+        appCustomTooltip="Олот тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1097,7 +1093,7 @@ export const SVGString = `
         data-name_uzl="Romitan tumani"
         data-name_ru="Ромитанский район"
         data-type="district"
-        matTooltip="Ромитан тумани"
+        appCustomTooltip="Ромитан тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1116,7 +1112,7 @@ export const SVGString = `
         data-name_uzl="Qorovulbozor tumani"
         data-name_ru="Караулбазарский район"
         data-type="district"
-        matTooltip="Қоровулбозор тумани"
+        appCustomTooltip="Қоровулбозор тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1135,7 +1131,7 @@ export const SVGString = `
         data-name_uzl="Buxoro shahri"
         data-name_ru="город Бухара"
         data-type="district"
-        matTooltip="Бухоро шаҳри"
+        appCustomTooltip="Бухоро шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1152,7 +1148,7 @@ export const SVGString = `
         data-name_uzl="Buxoro tumani"
         data-name_ru="Бухарский район"
         data-type="district"
-        matTooltip="Бухоро тумани"
+        appCustomTooltip="Бухоро тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1171,7 +1167,7 @@ export const SVGString = `
         data-name_uzl="Kogon tumani"
         data-name_ru="Каганский район"
         data-type="district"
-        matTooltip="Когон тумани"
+        appCustomTooltip="Когон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1190,7 +1186,7 @@ export const SVGString = `
         data-name_uzl="Kogon shahri"
         data-name_ru="город Каган"
         data-type="district"
-        matTooltip="Когон шаҳри"
+        appCustomTooltip="Когон шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1209,7 +1205,7 @@ export const SVGString = `
         data-name_uzl="Romitan tumani"
         data-name_ru="Ромитанский район"
         data-type="district"
-        matTooltip="Ромитан тумани"
+        appCustomTooltip="Ромитан тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1228,7 +1224,7 @@ export const SVGString = `
         data-name_uzl="Peshku tumani"
         data-name_ru="Пешкунский район"
         data-type="district"
-        matTooltip="Пешку тумани"
+        appCustomTooltip="Пешку тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1247,7 +1243,7 @@ export const SVGString = `
         data-name_uzl="Shofirkon tumani"
         data-name_ru="Шафирканский район"
         data-type="district"
-        matTooltip="Шофиркон тумани"
+        appCustomTooltip="Шофиркон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1266,7 +1262,7 @@ export const SVGString = `
         data-name_uzl="Vobkent tumani"
         data-name_ru="Вабкентский район"
         data-type="district"
-        matTooltip="Вобкент тумани"
+        appCustomTooltip="Вобкент тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1285,7 +1281,7 @@ export const SVGString = `
         data-name_uzl="Gʻijduvon tumani"
         data-name_ru="Гиждуванский район"
         data-type="district"
-        matTooltip="Ғиждувон тумани"
+        appCustomTooltip="Ғиждувон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1304,7 +1300,7 @@ export const SVGString = `
         data-name_uzl="Jondor tumani"
         data-name_ru="Жондорский район"
         data-type="district"
-        matTooltip="Жондор тумани"
+        appCustomTooltip="Жондор тумани"
       ></path>
     </g>
     <path
@@ -1324,7 +1320,7 @@ export const SVGString = `
       data-name_uzl="Buxoro viloyati"
       data-name_ru="Бухарская область"
       data-type="province"
-      matTooltip="Бухоро вилояти"
+      appCustomTooltip="Бухоро вилояти"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -1346,7 +1342,7 @@ export const SVGString = `
         data-name_uzl="Forish tumani"
         data-name_ru="Фаришский район"
         data-type="district"
-        matTooltip="Фориш тумани"
+        appCustomTooltip="Фориш тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1365,7 +1361,7 @@ export const SVGString = `
         data-name_uzl="Gʻallaorol tumani"
         data-name_ru="Галляаральский район"
         data-type="district"
-        matTooltip="Ғаллаорол тумани"
+        appCustomTooltip="Ғаллаорол тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1384,7 +1380,7 @@ export const SVGString = `
         data-name_uzl="Arnasoy tumani"
         data-name_ru="Арнасайский район"
         data-type="district"
-        matTooltip="Арнасой тумани"
+        appCustomTooltip="Арнасой тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1403,7 +1399,7 @@ export const SVGString = `
         data-name_uzl="Mirzachoʻl tumani"
         data-name_ru="Мирзачулский район"
         data-type="district"
-        matTooltip="Мирзачўл тумани"
+        appCustomTooltip="Мирзачўл тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1422,7 +1418,7 @@ export const SVGString = `
         data-name_uzl="Doʻstlik tumani"
         data-name_ru="Дустликский район"
         data-type="district"
-        matTooltip="Дўстлик тумани"
+        appCustomTooltip="Дўстлик тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1441,7 +1437,7 @@ export const SVGString = `
         data-name_uzl="Zafarobod tumani"
         data-name_ru="Зафарабадский район"
         data-type="district"
-        matTooltip="Зафаробод тумани"
+        appCustomTooltip="Зафаробод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1460,7 +1456,7 @@ export const SVGString = `
         data-name_uzl="Paxtakor tumani"
         data-name_ru="Пахтакорский район"
         data-type="district"
-        matTooltip="Пахтакор тумани"
+        appCustomTooltip="Пахтакор тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1479,7 +1475,7 @@ export const SVGString = `
         data-name_uzl="Zarbdor tumani"
         data-name_ru="Зарбдарский район"
         data-type="district"
-        matTooltip="Зарбдор тумани"
+        appCustomTooltip="Зарбдор тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1498,7 +1494,7 @@ export const SVGString = `
         data-name_uzl="Baxmal tumani"
         data-name_ru="Бахмальский район"
         data-type="district"
-        matTooltip="Бахмал тумани"
+        appCustomTooltip="Бахмал тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1517,7 +1513,7 @@ export const SVGString = `
         data-name_uzl="Yangiobod tumani"
         data-name_ru="Янгиабадский район"
         data-type="district"
-        matTooltip="Янгиобод тумани"
+        appCustomTooltip="Янгиобод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1536,7 +1532,7 @@ export const SVGString = `
         data-name_uzl="Zomin tumani"
         data-name_ru="Заминский район"
         data-type="district"
-        matTooltip="Зомин тумани"
+        appCustomTooltip="Зомин тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1555,7 +1551,7 @@ export const SVGString = `
         data-name_uzl="Jizzax shahri"
         data-name_ru="город Джизак"
         data-type="district"
-        matTooltip="Жиззах шаҳри"
+        appCustomTooltip="Жиззах шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1574,7 +1570,7 @@ export const SVGString = `
         data-name_uzl="Sh.Rashidov tumani"
         data-name_ru="Ш.Рашидовский район"
         data-type="district"
-        matTooltip="Ш.Рашидов тумани"
+        appCustomTooltip="Ш.Рашидов тумани"
       ></path>
     </g>
     <path
@@ -1594,7 +1590,7 @@ export const SVGString = `
       data-name_uzl="Jizzax viloyati"
       data-name_ru="Джизакская область"
       data-type="province"
-      matTooltip="Жиззах вилояти"
+      appCustomTooltip="Жиззах вилояти"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -1616,7 +1612,7 @@ export const SVGString = `
         data-name_uzl="Mirishkor tumani"
         data-name_ru="Миришкорский район"
         data-type="district"
-        matTooltip="Миришкор тумани"
+        appCustomTooltip="Миришкор тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1635,7 +1631,7 @@ export const SVGString = `
         data-name_uzl="Muborak tumani"
         data-name_ru="Мубарекский район"
         data-type="district"
-        matTooltip="Муборак тумани"
+        appCustomTooltip="Муборак тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1654,7 +1650,7 @@ export const SVGString = `
         data-name_uzl="Kasbi tumani"
         data-name_ru="Касбинский район"
         data-type="district"
-        matTooltip="Касби тумани"
+        appCustomTooltip="Касби тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1673,7 +1669,7 @@ export const SVGString = `
         data-name_uzl="Nishon tumani"
         data-name_ru="Нишанский район"
         data-type="district"
-        matTooltip="Нишон тумани"
+        appCustomTooltip="Нишон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1692,7 +1688,7 @@ export const SVGString = `
         data-name_uzl="Koson tumani"
         data-name_ru="Касанский район"
         data-type="district"
-        matTooltip="Косон тумани"
+        appCustomTooltip="Косон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1711,7 +1707,7 @@ export const SVGString = `
         data-name_uzl="Gʻuzor tumani"
         data-name_ru="Гузарский район"
         data-type="district"
-        matTooltip="Ғузор тумани"
+        appCustomTooltip="Ғузор тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1728,7 +1724,7 @@ export const SVGString = `
         data-name_uzl="Qarshi tumani"
         data-name_ru="Каршинский район"
         data-type="district"
-        matTooltip="Қарши тумани"
+        appCustomTooltip="Қарши тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1747,7 +1743,7 @@ export const SVGString = `
         data-name_uzl="Qarshi shahri"
         data-name_ru="город Карши"
         data-type="district"
-        matTooltip="Қарши шаҳри"
+        appCustomTooltip="Қарши шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1766,7 +1762,7 @@ export const SVGString = `
         data-name_uzl="Koʻkdala tumani"
         data-name_ru="Кўкдала тумани"
         data-type="district"
-        matTooltip="Кўкдала тумани"
+        appCustomTooltip="Кўкдала тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1785,7 +1781,7 @@ export const SVGString = `
         data-name_uzl="Dehqonobod tumani"
         data-name_ru="Дехканабадский район"
         data-type="district"
-        matTooltip="Деҳқонобод тумани"
+        appCustomTooltip="Деҳқонобод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1804,7 +1800,7 @@ export const SVGString = `
         data-name_uzl="Qamashi tumani"
         data-name_ru="Камашинский район"
         data-type="district"
-        matTooltip="Қамаши тумани"
+        appCustomTooltip="Қамаши тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1823,7 +1819,7 @@ export const SVGString = `
         data-name_uzl="Yakkabogʻ tumani"
         data-name_ru="Яккабогский район"
         data-type="district"
-        matTooltip="Яккабоғ тумани"
+        appCustomTooltip="Яккабоғ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1842,7 +1838,7 @@ export const SVGString = `
         data-name_uzl="Chiroqchi tumani"
         data-name_ru="Чиракчинский район"
         data-type="district"
-        matTooltip="Чироқчи тумани"
+        appCustomTooltip="Чироқчи тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1861,7 +1857,7 @@ export const SVGString = `
         data-name_uzl="Kitob tumani"
         data-name_ru="Китабский район"
         data-type="district"
-        matTooltip="Китоб тумани"
+        appCustomTooltip="Китоб тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1880,7 +1876,7 @@ export const SVGString = `
         data-name_uzl="Shahrisabz tumani"
         data-name_ru="Шахрисабзский район"
         data-type="district"
-        matTooltip="Шаҳрисабз тумани"
+        appCustomTooltip="Шаҳрисабз тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1899,7 +1895,7 @@ export const SVGString = `
         data-name_uzl="Shahrisabz shahri"
         data-name_ru="город Шахрисабз"
         data-type="district"
-        matTooltip="Шаҳрисабз шаҳри"
+        appCustomTooltip="Шаҳрисабз шаҳри"
       ></path>
     </g>
     <path
@@ -1919,7 +1915,7 @@ export const SVGString = `
       data-name_uzl="Qashqadaryo viloyati"
       data-name_ru="Кашкадарьинская область"
       data-type="province"
-      matTooltip="Қашқадарё вилояти"
+      appCustomTooltip="Қашқадарё вилояти"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -1941,7 +1937,7 @@ export const SVGString = `
         data-name_uzl="Uchquduq tumani"
         data-name_ru="Учкудукский район"
         data-type="district"
-        matTooltip="Учқудуқ тумани"
+        appCustomTooltip="Учқудуқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1960,7 +1956,7 @@ export const SVGString = `
         data-name_uzl="Tomdi tumani"
         data-name_ru="Тамдынский район"
         data-type="district"
-        matTooltip="Томди тумани"
+        appCustomTooltip="Томди тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1977,7 +1973,7 @@ export const SVGString = `
         data-name_uzl="Zarafshon shahri"
         data-name_ru="город Зарафшан"
         data-type="district"
-        matTooltip="Зарафшон шаҳри"
+        appCustomTooltip="Зарафшон шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -1996,7 +1992,7 @@ export const SVGString = `
         data-name_uzl="Konimex tumani"
         data-name_ru="Канимехский район"
         data-type="district"
-        matTooltip="Конимех тумани"
+        appCustomTooltip="Конимех тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2015,7 +2011,7 @@ export const SVGString = `
         data-name_uzl="Gʻazgʻon shahri"
         data-name_ru="Город Ғазғон"
         data-type="district"
-        matTooltip="Ғазғон шаҳри"
+        appCustomTooltip="Ғазғон шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2032,7 +2028,7 @@ export const SVGString = `
         data-name_uzl="Nurota tumani"
         data-name_ru="Нуратинский район"
         data-type="district"
-        matTooltip="Нурота тумани"
+        appCustomTooltip="Нурота тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2049,7 +2045,7 @@ export const SVGString = `
         data-name_uzl="Xatirchi tumani"
         data-name_ru="Хатырчинский район"
         data-type="district"
-        matTooltip="Хатирчи тумани"
+        appCustomTooltip="Хатирчи тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2068,7 +2064,7 @@ export const SVGString = `
         data-name_uzl="Navbahor tumani"
         data-name_ru="Навбахорский район"
         data-type="district"
-        matTooltip="Навбаҳор тумани"
+        appCustomTooltip="Навбаҳор тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2087,7 +2083,7 @@ export const SVGString = `
         data-name_uzl="Qiziltepa tumani"
         data-name_ru="Кизилтепинский район"
         data-type="district"
-        matTooltip="Қизилтепа тумани"
+        appCustomTooltip="Қизилтепа тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2106,7 +2102,7 @@ export const SVGString = `
         data-name_uzl="Karmana tumani"
         data-name_ru="Карманинский район"
         data-type="district"
-        matTooltip="Кармана тумани"
+        appCustomTooltip="Кармана тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2125,7 +2121,7 @@ export const SVGString = `
         data-name_uzl="Navoiy shahri"
         data-name_ru="город Навои"
         data-type="district"
-        matTooltip="Навоий шаҳри"
+        appCustomTooltip="Навоий шаҳри"
       ></path>
     </g>
     <path
@@ -2145,7 +2141,7 @@ export const SVGString = `
       data-name_uzl="Navoiy viloyati"
       data-name_ru="Навоийская область"
       data-type="province"
-      matTooltip="Навоий вилояти"
+      appCustomTooltip="Навоий вилояти"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -2167,7 +2163,7 @@ export const SVGString = `
         data-name_uzl="Pop tumani"
         data-name_ru="Папский район"
         data-type="district"
-        matTooltip="Поп тумани"
+        appCustomTooltip="Поп тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2186,7 +2182,7 @@ export const SVGString = `
         data-name_uzl="Chust tumani"
         data-name_ru="Чустский район"
         data-type="district"
-        matTooltip="Чуст тумани"
+        appCustomTooltip="Чуст тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2205,7 +2201,7 @@ export const SVGString = `
         data-name_uzl="Mingbuloq tumani"
         data-name_ru="Мингбулакский район"
         data-type="district"
-        matTooltip="Мингбулоқ тумани"
+        appCustomTooltip="Мингбулоқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2224,7 +2220,7 @@ export const SVGString = `
         data-name_uzl="Kosonsoy tumani"
         data-name_ru="Касансайский район"
         data-type="district"
-        matTooltip="Косонсой тумани"
+        appCustomTooltip="Косонсой тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2243,7 +2239,7 @@ export const SVGString = `
         data-name_uzl="Toʻraqoʻrgʻon tumani"
         data-name_ru="Туракурганский район"
         data-type="district"
-        matTooltip="Тўрақўрғон тумани"
+        appCustomTooltip="Тўрақўрғон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2262,7 +2258,7 @@ export const SVGString = `
         data-name_uzl="Yangiqoʻrgʻon tumani"
         data-name_ru="Янгикурганский района"
         data-type="district"
-        matTooltip="Янгиқўрғон тумани"
+        appCustomTooltip="Янгиқўрғон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2281,7 +2277,7 @@ export const SVGString = `
         data-name_uzl="Namangan shahri"
         data-name_ru="город Наманган"
         data-type="district"
-        matTooltip="Наманган шаҳри"
+        appCustomTooltip="Наманган шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2300,7 +2296,7 @@ export const SVGString = `
         data-name_uzl="Namangan tumani"
         data-name_ru="Наманганский район"
         data-type="district"
-        matTooltip="Наманган тумани"
+        appCustomTooltip="Наманган тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2319,7 +2315,7 @@ export const SVGString = `
         data-name_uzl="Chortoq tumani"
         data-name_ru="Чартакский район"
         data-type="district"
-        matTooltip="Чортоқ тумани"
+        appCustomTooltip="Чортоқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2336,7 +2332,7 @@ export const SVGString = `
         data-name_uzl="Uychi tumani"
         data-name_ru="Уйчинский район"
         data-type="district"
-        matTooltip="Уйчи тумани"
+        appCustomTooltip="Уйчи тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2355,7 +2351,7 @@ export const SVGString = `
         data-name_uzl="Uchqoʻrgʻon tumani"
         data-name_ru="Учкурганский район"
         data-type="district"
-        matTooltip="Учқўрғон тумани"
+        appCustomTooltip="Учқўрғон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2374,7 +2370,7 @@ export const SVGString = `
         data-name_uzl="Norin tumani"
         data-name_ru="Норинский район"
         data-type="district"
-        matTooltip="Норин тумани"
+        appCustomTooltip="Норин тумани"
       ></path>
     </g>
     <path
@@ -2394,7 +2390,7 @@ export const SVGString = `
       data-name_uzl="Namangan viloyati"
       data-name_ru="Наманганская область"
       data-type="province"
-      matTooltip="Наманган вилояти"
+      appCustomTooltip="Наманган вилояти"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -2416,7 +2412,7 @@ export const SVGString = `
         data-name_uzl="Paxtachi tumani"
         data-name_ru="Пахтачинский район"
         data-type="district"
-        matTooltip="Пахтачи тумани"
+        appCustomTooltip="Пахтачи тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2435,7 +2431,7 @@ export const SVGString = `
         data-name_uzl="Nurobod tumani"
         data-name_ru="Нурабадский район"
         data-type="district"
-        matTooltip="Нуробод тумани"
+        appCustomTooltip="Нуробод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2454,7 +2450,7 @@ export const SVGString = `
         data-name_uzl="Narpay tumani"
         data-name_ru="Нарпайский район"
         data-type="district"
-        matTooltip="Нарпай тумани"
+        appCustomTooltip="Нарпай тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2473,7 +2469,7 @@ export const SVGString = `
         data-name_uzl="Kattaqoʻrgʻon shahri"
         data-name_ru="город Каттакурган"
         data-type="district"
-        matTooltip="Каттақўрғон шаҳри"
+        appCustomTooltip="Каттақўрғон шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2492,7 +2488,7 @@ export const SVGString = `
         data-name_uzl="Ishtixon tumani"
         data-name_ru="Иштыханский район"
         data-type="district"
-        matTooltip="Иштихон тумани"
+        appCustomTooltip="Иштихон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2511,7 +2507,7 @@ export const SVGString = `
         data-name_uzl="Qoʻshrabod tumani"
         data-name_ru="Кошрабадский район"
         data-type="district"
-        matTooltip="Қўшрабод тумани"
+        appCustomTooltip="Қўшрабод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2530,7 +2526,7 @@ export const SVGString = `
         data-name_uzl="Payariq tumani"
         data-name_ru="Пайарыкский район"
         data-type="district"
-        matTooltip="Пайариқ тумани"
+        appCustomTooltip="Пайариқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2547,7 +2543,7 @@ export const SVGString = `
         data-name_uzl="Oqdaryo tumani"
         data-name_ru="Акдарьинский район"
         data-type="district"
-        matTooltip="Оқдарё тумани"
+        appCustomTooltip="Оқдарё тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2564,7 +2560,7 @@ export const SVGString = `
         data-name_uzl="Samarqand shahri"
         data-name_ru="город Самарканд"
         data-type="district"
-        matTooltip="Самарқанд шаҳри"
+        appCustomTooltip="Самарқанд шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2583,7 +2579,7 @@ export const SVGString = `
         data-name_uzl="Samarqand tumani"
         data-name_ru="Самаркандский район"
         data-type="district"
-        matTooltip="Самарқанд тумани"
+        appCustomTooltip="Самарқанд тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2600,7 +2596,7 @@ export const SVGString = `
         data-name_uzl="Urgut tumani"
         data-name_ru="Ургутский район"
         data-type="district"
-        matTooltip="Ургут тумани"
+        appCustomTooltip="Ургут тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2619,7 +2615,7 @@ export const SVGString = `
         data-name_uzl="Tayloq tumani"
         data-name_ru="Тайлакский район"
         data-type="district"
-        matTooltip="Тайлоқ тумани"
+        appCustomTooltip="Тайлоқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2636,7 +2632,7 @@ export const SVGString = `
         data-name_uzl="Jomboy tumani"
         data-name_ru="Джамбайский район"
         data-type="district"
-        matTooltip="Жомбой тумани"
+        appCustomTooltip="Жомбой тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2655,7 +2651,7 @@ export const SVGString = `
         data-name_uzl="Bulungʻur tumani"
         data-name_ru="Булунгурский район"
         data-type="district"
-        matTooltip="Булунғур тумани"
+        appCustomTooltip="Булунғур тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2674,7 +2670,7 @@ export const SVGString = `
         data-name_uzl="Kattaqoʻrgʻon tumani"
         data-name_ru="Каттакурганский район"
         data-type="district"
-        matTooltip="Каттақўрғон тумани"
+        appCustomTooltip="Каттақўрғон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2691,7 +2687,7 @@ export const SVGString = `
         data-name_uzl="Pastdargʻom tumani"
         data-name_ru="Пастдаргомский район"
         data-type="district"
-        matTooltip="Пастдарғом тумани"
+        appCustomTooltip="Пастдарғом тумани"
       ></path>
     </g>
     <path
@@ -2711,7 +2707,7 @@ export const SVGString = `
       data-name_uzl="Samarqand viloyati"
       data-name_ru="Самаркандская область"
       data-type="province"
-      matTooltip="Самарқанд вилояти"
+      appCustomTooltip="Самарқанд вилояти"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -2733,7 +2729,7 @@ export const SVGString = `
         data-name_uzl="Oqoltin tumani"
         data-name_ru="Акалтынский район"
         data-type="district"
-        matTooltip="Оқолтин тумани"
+        appCustomTooltip="Оқолтин тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2752,7 +2748,7 @@ export const SVGString = `
         data-name_uzl="Sardoba tumani"
         data-name_ru="Сардобинский район"
         data-type="district"
-        matTooltip="Сардоба тумани"
+        appCustomTooltip="Сардоба тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2771,7 +2767,7 @@ export const SVGString = `
         data-name_uzl="Sirdaryo tumani"
         data-name_ru="Сырдарьинский район"
         data-type="district"
-        matTooltip="Сирдарё тумани"
+        appCustomTooltip="Сирдарё тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2790,7 +2786,7 @@ export const SVGString = `
         data-name_uzl="Sayxunobod tumani"
         data-name_ru="Сайхунабадский район"
         data-type="district"
-        matTooltip="Сайхунобод тумани"
+        appCustomTooltip="Сайхунобод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2809,7 +2805,7 @@ export const SVGString = `
         data-name_uzl="Mirzaobod tumani"
         data-name_ru="Мирзаабадский район"
         data-type="district"
-        matTooltip="Мирзаобод тумани"
+        appCustomTooltip="Мирзаобод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2828,7 +2824,7 @@ export const SVGString = `
         data-name_uzl="Yangiyer shahri"
         data-name_ru="Янгиерский район"
         data-type="district"
-        matTooltip="Янгиер шаҳри"
+        appCustomTooltip="Янгиер шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2847,7 +2843,7 @@ export const SVGString = `
         data-name_uzl="Guliston tumani"
         data-name_ru="Гулистанский район"
         data-type="district"
-        matTooltip="Гулистон тумани"
+        appCustomTooltip="Гулистон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2866,7 +2862,7 @@ export const SVGString = `
         data-name_uzl="Guliston shahri"
         data-name_ru="город Гулистан"
         data-type="district"
-        matTooltip="Гулистон шаҳри"
+        appCustomTooltip="Гулистон шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2885,7 +2881,7 @@ export const SVGString = `
         data-name_uzl="Xovos tumani"
         data-name_ru="Хавастский район"
         data-type="district"
-        matTooltip="Ховос тумани"
+        appCustomTooltip="Ховос тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2904,7 +2900,7 @@ export const SVGString = `
         data-name_uzl="Shirin shahri"
         data-name_ru="город Ширин"
         data-type="district"
-        matTooltip="Ширин шаҳри"
+        appCustomTooltip="Ширин шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2923,7 +2919,7 @@ export const SVGString = `
         data-name_uzl="Boyovut tumani"
         data-name_ru="Баяутский район"
         data-type="district"
-        matTooltip="Боёвут тумани"
+        appCustomTooltip="Боёвут тумани"
       ></path>
     </g>
     <path
@@ -2943,7 +2939,7 @@ export const SVGString = `
       data-name_uzl="Sirdaryo viloyati"
       data-name_ru="Сырдарьинская область"
       data-type="province"
-      matTooltip="Сирдарё вилояти"
+      appCustomTooltip="Сирдарё вилояти"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -2965,7 +2961,7 @@ export const SVGString = `
         data-name_uzl="Sariosiyo tumani"
         data-name_ru="Сарыасийский район"
         data-type="district"
-        matTooltip="Сариосиё тумани"
+        appCustomTooltip="Сариосиё тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -2984,7 +2980,7 @@ export const SVGString = `
         data-name_uzl="Boysun tumani"
         data-name_ru="Бойсунский район"
         data-type="district"
-        matTooltip="Бойсун тумани"
+        appCustomTooltip="Бойсун тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3003,7 +2999,7 @@ export const SVGString = `
         data-name_uzl="Sherobod tumani"
         data-name_ru="Шерабадский район"
         data-type="district"
-        matTooltip="Шеробод тумани"
+        appCustomTooltip="Шеробод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3022,7 +3018,7 @@ export const SVGString = `
         data-name_uzl="Denov tumani"
         data-name_ru="Деновский район"
         data-type="district"
-        matTooltip="Денов тумани"
+        appCustomTooltip="Денов тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3041,7 +3037,7 @@ export const SVGString = `
         data-name_uzl="Oltinsoy tumani"
         data-name_ru="Алтынсайский район"
         data-type="district"
-        matTooltip="Олтинсой тумани"
+        appCustomTooltip="Олтинсой тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3060,7 +3056,7 @@ export const SVGString = `
         data-name_uzl="Uzun tumani"
         data-name_ru="Узунский район"
         data-type="district"
-        matTooltip="Узун тумани"
+        appCustomTooltip="Узун тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3079,7 +3075,7 @@ export const SVGString = `
         data-name_uzl="Shoʻrchi tumani"
         data-name_ru="Шурчинский район"
         data-type="district"
-        matTooltip="Шўрчи тумани"
+        appCustomTooltip="Шўрчи тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3098,7 +3094,7 @@ export const SVGString = `
         data-name_uzl="Bandixon tumani"
         data-name_ru="Бандихон тумани"
         data-type="district"
-        matTooltip="Бандихон тумани"
+        appCustomTooltip="Бандихон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3117,7 +3113,7 @@ export const SVGString = `
         data-name_uzl="Qiziriq tumani"
         data-name_ru="Кызырыкский район"
         data-type="district"
-        matTooltip="Қизириқ тумани"
+        appCustomTooltip="Қизириқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3136,7 +3132,7 @@ export const SVGString = `
         data-name_uzl="Muzrabot tumani"
         data-name_ru="Музрабатский район"
         data-type="district"
-        matTooltip="Музработ тумани"
+        appCustomTooltip="Музработ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3155,7 +3151,7 @@ export const SVGString = `
         data-name_uzl="Angor tumani"
         data-name_ru="Ангорский район"
         data-type="district"
-        matTooltip="Ангор тумани"
+        appCustomTooltip="Ангор тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3174,7 +3170,7 @@ export const SVGString = `
         data-name_uzl="Qumqoʻrgʻon tumani"
         data-name_ru="Кумкурганский район"
         data-type="district"
-        matTooltip="Қумқўрғон тумани"
+        appCustomTooltip="Қумқўрғон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3193,7 +3189,7 @@ export const SVGString = `
         data-name_uzl="Jarqoʻrgʻon tumani"
         data-name_ru="Джаркурганский район"
         data-type="district"
-        matTooltip="Жарқўрғон тумани"
+        appCustomTooltip="Жарқўрғон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3212,7 +3208,7 @@ export const SVGString = `
         data-name_uzl="Termiz tumani"
         data-name_ru="Термезский район"
         data-type="district"
-        matTooltip="Термиз тумани"
+        appCustomTooltip="Термиз тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3231,7 +3227,7 @@ export const SVGString = `
         data-name_uzl="Termiz shahri"
         data-name_ru="город Термез"
         data-type="district"
-        matTooltip="Термиз шаҳри"
+        appCustomTooltip="Термиз шаҳри"
       ></path>
     </g>
     <path
@@ -3251,7 +3247,7 @@ export const SVGString = `
       data-name_uzl="Surxondaryo viloyati"
       data-name_ru="Сурхандарьинская область"
       data-type="province"
-      matTooltip="Сурхондарё вилояти"
+      appCustomTooltip="Сурхондарё вилояти"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -3273,7 +3269,7 @@ export const SVGString = `
         data-name_uzl="Beshariq tumani"
         data-name_ru="Бешарыкский район"
         data-type="district"
-        matTooltip="Бешариқ тумани"
+        appCustomTooltip="Бешариқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3292,7 +3288,7 @@ export const SVGString = `
         data-name_uzl="Furqat tumani"
         data-name_ru="Фуркатский район"
         data-type="district"
-        matTooltip="Фурқат тумани"
+        appCustomTooltip="Фурқат тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3311,7 +3307,7 @@ export const SVGString = `
         data-name_uzl="Dangʻara tumani"
         data-name_ru="Дангаринский район"
         data-type="district"
-        matTooltip="Данғара тумани"
+        appCustomTooltip="Данғара тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3330,7 +3326,7 @@ export const SVGString = `
         data-name_uzl="Oʻzbekiston tumani"
         data-name_ru="Узбекистанский район"
         data-type="district"
-        matTooltip="Ўзбекистон тумани"
+        appCustomTooltip="Ўзбекистон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3349,7 +3345,7 @@ export const SVGString = `
         data-name_uzl="Qoʻqon shahri"
         data-name_ru="город Коканд"
         data-type="district"
-        matTooltip="Қўқон шаҳри"
+        appCustomTooltip="Қўқон шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3368,7 +3364,7 @@ export const SVGString = `
         data-name_uzl="Uchkoʻprik tumani"
         data-name_ru="Учкуприкский район"
         data-type="district"
-        matTooltip="Учкўприк тумани"
+        appCustomTooltip="Учкўприк тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3387,7 +3383,7 @@ export const SVGString = `
         data-name_uzl="Buvayda tumani"
         data-name_ru="Бувайдинский район"
         data-type="district"
-        matTooltip="Бувайда тумани"
+        appCustomTooltip="Бувайда тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3406,7 +3402,7 @@ export const SVGString = `
         data-name_uzl="Bagʻdod tumani"
         data-name_ru="Багдадский район"
         data-type="district"
-        matTooltip="Бағдод тумани"
+        appCustomTooltip="Бағдод тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3425,7 +3421,7 @@ export const SVGString = `
         data-name_uzl="Yozyovon tumani"
         data-name_ru="Язъяванский район"
         data-type="district"
-        matTooltip="Ёзёвон тумани"
+        appCustomTooltip="Ёзёвон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3444,7 +3440,7 @@ export const SVGString = `
         data-name_uzl="Soʻx tumani"
         data-name_ru="Сохский район"
         data-type="district"
-        matTooltip="Сўх тумани"
+        appCustomTooltip="Сўх тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3463,7 +3459,7 @@ export const SVGString = `
         data-name_uzl="Rishton tumani"
         data-name_ru="Риштанский район"
         data-type="district"
-        matTooltip="Риштон тумани"
+        appCustomTooltip="Риштон тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3482,7 +3478,7 @@ export const SVGString = `
         data-name_uzl="Oltiariq tumani"
         data-name_ru="Алтыарыкский район"
         data-type="district"
-        matTooltip="Олтиариқ тумани"
+        appCustomTooltip="Олтиариқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3501,7 +3497,7 @@ export const SVGString = `
         data-name_uzl="Qoʻshtepa tumani"
         data-name_ru="Куштепинский район"
         data-type="district"
-        matTooltip="Қўштепа тумани"
+        appCustomTooltip="Қўштепа тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3520,7 +3516,7 @@ export const SVGString = `
         data-name_uzl="Fargʻona shahri"
         data-name_ru="город Фергана"
         data-type="district"
-        matTooltip="Фарғона шаҳри"
+        appCustomTooltip="Фарғона шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3539,7 +3535,7 @@ export const SVGString = `
         data-name_uzl="Margʻilon shahri"
         data-name_ru="город Маргилан"
         data-type="district"
-        matTooltip="Марғилон шаҳри"
+        appCustomTooltip="Марғилон шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3558,7 +3554,7 @@ export const SVGString = `
         data-name_uzl="Fargʻona tumani"
         data-name_ru="Ферганский район"
         data-type="district"
-        matTooltip="Фарғона тумани"
+        appCustomTooltip="Фарғона тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3577,7 +3573,7 @@ export const SVGString = `
         data-name_uzl="Quvasoy shahri"
         data-name_ru="город Кувасай"
         data-type="district"
-        matTooltip="Қувасой шаҳри"
+        appCustomTooltip="Қувасой шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3596,7 +3592,7 @@ export const SVGString = `
         data-name_uzl="Quva tumani"
         data-name_ru="Кувинский район"
         data-type="district"
-        matTooltip="Қува тумани"
+        appCustomTooltip="Қува тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3615,7 +3611,7 @@ export const SVGString = `
         data-name_uzl="Toshloq tumani"
         data-name_ru="Ташлакский район"
         data-type="district"
-        matTooltip="Тошлоқ тумани"
+        appCustomTooltip="Тошлоқ тумани"
       ></path>
     </g>
     <path
@@ -3635,7 +3631,7 @@ export const SVGString = `
       data-name_uzl="Fargʻona viloyati"
       data-name_ru="Ферганская область"
       data-type="province"
-      matTooltip="Фарғона вилояти"
+      appCustomTooltip="Фарғона вилояти"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -3657,7 +3653,7 @@ export const SVGString = `
         data-name_uzl="Tuproqqalʼa tumani"
         data-name_ru="Тупроккалинский район"
         data-type="district"
-        matTooltip="Тупроққалъа тумани"
+        appCustomTooltip="Тупроққалъа тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3676,7 +3672,7 @@ export const SVGString = `
         data-name_uzl="Shovot tumani"
         data-name_ru="Шаватский район"
         data-type="district"
-        matTooltip="Шовот тумани"
+        appCustomTooltip="Шовот тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3695,7 +3691,7 @@ export const SVGString = `
         data-name_uzl="Gurlan tumani"
         data-name_ru="Гурланский район"
         data-type="district"
-        matTooltip="Гурлан тумани"
+        appCustomTooltip="Гурлан тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3714,7 +3710,7 @@ export const SVGString = `
         data-name_uzl="Yangibozor tumani"
         data-name_ru="Янгибазарский район"
         data-type="district"
-        matTooltip="Янгибозор тумани"
+        appCustomTooltip="Янгибозор тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3733,7 +3729,7 @@ export const SVGString = `
         data-name_uzl="Kushkupir tumani"
         data-name_ru="Кушкупирский район"
         data-type="district"
-        matTooltip="Кушкупир тумани"
+        appCustomTooltip="Кушкупир тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3752,7 +3748,7 @@ export const SVGString = `
         data-name_uzl="Xiva tumani"
         data-name_ru="Хивинский район"
         data-type="district"
-        matTooltip="Хива тумани"
+        appCustomTooltip="Хива тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3771,7 +3767,7 @@ export const SVGString = `
         data-name_uzl="Yangiariq tumani"
         data-name_ru="Янгиарыкский район"
         data-type="district"
-        matTooltip="Янгиариқ тумани"
+        appCustomTooltip="Янгиариқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3790,7 +3786,7 @@ export const SVGString = `
         data-name_uzl="Urganch tumani"
         data-name_ru="Ургенчский район"
         data-type="district"
-        matTooltip="Урганч тумани"
+        appCustomTooltip="Урганч тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3809,7 +3805,7 @@ export const SVGString = `
         data-name_uzl="Bogot tumani"
         data-name_ru="Багатский район"
         data-type="district"
-        matTooltip="Богот тумани"
+        appCustomTooltip="Богот тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3828,7 +3824,7 @@ export const SVGString = `
         data-name_uzl="Xonka tumani"
         data-name_ru="Ханкинский район"
         data-type="district"
-        matTooltip="Хонка тумани"
+        appCustomTooltip="Хонка тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3847,7 +3843,7 @@ export const SVGString = `
         data-name_uzl="Xazarasp tumani"
         data-name_ru="Хазараспский район"
         data-type="district"
-        matTooltip="Хазарасп тумани"
+        appCustomTooltip="Хазарасп тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3866,7 +3862,7 @@ export const SVGString = `
         data-name_uzl="Xiva shaxri"
         data-name_ru="Город Хива"
         data-type="district"
-        matTooltip="Хива шахри"
+        appCustomTooltip="Хива шахри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3885,7 +3881,7 @@ export const SVGString = `
         data-name_uzl="Urganch shaxri"
         data-name_ru="город Ургенч"
         data-type="district"
-        matTooltip="Урганч шахри"
+        appCustomTooltip="Урганч шахри"
       ></path>
     </g>
     <path
@@ -3905,7 +3901,7 @@ export const SVGString = `
       data-name_uzl="Xorazm viloyati"
       data-name_ru="Хорезмская область"
       data-type="province"
-      matTooltip="Хоразм вилояти"
+      appCustomTooltip="Хоразм вилояти"
     ></path>
   </g>
   <g _ngcontent-ng-c2692107163="">
@@ -3927,7 +3923,7 @@ export const SVGString = `
         data-name_uzl="Moʻynoq tumani"
         data-name_ru="Муйнакский район"
         data-type="district"
-        matTooltip="Мўйноқ тумани"
+        appCustomTooltip="Мўйноқ тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3946,7 +3942,7 @@ export const SVGString = `
         data-name_uzl="Qoʻngʻirot tumani"
         data-name_ru="Кунградский район"
         data-type="district"
-        matTooltip="Қўнғирот тумани"
+        appCustomTooltip="Қўнғирот тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3965,7 +3961,7 @@ export const SVGString = `
         data-name_uzl="Shoʻmanoy tumani"
         data-name_ru="Шуманайский район"
         data-type="district"
-        matTooltip="Шўманой тумани"
+        appCustomTooltip="Шўманой тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -3984,7 +3980,7 @@ export const SVGString = `
         data-name_uzl="Qonlikoʻl tumani"
         data-name_ru="Канлыкульский район"
         data-type="district"
-        matTooltip="Қонликўл тумани"
+        appCustomTooltip="Қонликўл тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4003,7 +3999,7 @@ export const SVGString = `
         data-name_uzl="Xoʻjayli tumani"
         data-name_ru="Ходжейлийский район"
         data-type="district"
-        matTooltip="Хўжайли тумани"
+        appCustomTooltip="Хўжайли тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4020,7 +4016,7 @@ export const SVGString = `
         data-name_uzl="Nukus tumani"
         data-name_ru="Нукусский район"
         data-type="district"
-        matTooltip="Нукус тумани"
+        appCustomTooltip="Нукус тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4039,7 +4035,7 @@ export const SVGString = `
         data-name_uzl="Boʻzatov tumani"
         data-name_ru="Бузатауский район"
         data-type="district"
-        matTooltip="Бўзатов тумани"
+        appCustomTooltip="Бўзатов тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4058,7 +4054,7 @@ export const SVGString = `
         data-name_uzl="Nukus shahri"
         data-name_ru="город Нукус"
         data-type="district"
-        matTooltip="Нукус шаҳри"
+        appCustomTooltip="Нукус шаҳри"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4077,7 +4073,7 @@ export const SVGString = `
         data-name_uzl="Chimboy tumani"
         data-name_ru="Чимбайский район"
         data-type="district"
-        matTooltip="Чимбой тумани"
+        appCustomTooltip="Чимбой тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4096,7 +4092,7 @@ export const SVGString = `
         data-name_uzl="Taxiatosh tumani"
         data-name_ru="Тахиаташский район"
         data-type="district"
-        matTooltip="Тахиатош тумани"
+        appCustomTooltip="Тахиатош тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4115,7 +4111,7 @@ export const SVGString = `
         data-name_uzl="Amudaryo tumani"
         data-name_ru="Амударьинский район"
         data-type="district"
-        matTooltip="Амударё тумани"
+        appCustomTooltip="Амударё тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4134,7 +4130,7 @@ export const SVGString = `
         data-name_uzl="Qoraoʻzak tumani"
         data-name_ru="Караузякский район"
         data-type="district"
-        matTooltip="Қораўзак тумани"
+        appCustomTooltip="Қораўзак тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4153,7 +4149,7 @@ export const SVGString = `
         data-name_uzl="Taxtakoʻpir tumani"
         data-name_ru="Тахтакупырский район"
         data-type="district"
-        matTooltip="Тахтакўпир тумани"
+        appCustomTooltip="Тахтакўпир тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4172,7 +4168,7 @@ export const SVGString = `
         data-name_uzl="Beruniy tumani"
         data-name_ru="Берунийский район"
         data-type="district"
-        matTooltip="Беруний тумани"
+        appCustomTooltip="Беруний тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4191,7 +4187,7 @@ export const SVGString = `
         data-name_uzl="Ellikqalʼa tumani"
         data-name_ru="Элликкалинский район"
         data-type="district"
-        matTooltip="Элликқалъа тумани"
+        appCustomTooltip="Элликқалъа тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4210,7 +4206,7 @@ export const SVGString = `
         data-name_uzl="Toʻrtkoʻl tumani"
         data-name_ru="Турткульский район"
         data-type="district"
-        matTooltip="Тўрткўл тумани"
+        appCustomTooltip="Тўрткўл тумани"
       ></path>
       <path
         _ngcontent-ng-c2692107163=""
@@ -4229,7 +4225,7 @@ export const SVGString = `
         data-name_uzl="Kegayli tumani"
         data-name_ru="Кегейлийский район"
         data-type="district"
-        matTooltip="Кегайли тумани"
+        appCustomTooltip="Кегайли тумани"
       ></path>
     </g>
     <path
@@ -4249,7 +4245,7 @@ export const SVGString = `
       data-name_uzl="Qoraqalpogʻiston Respublikasi"
       data-name_ru="Республика Каракалпакстан"
       data-type="province"
-      matTooltip="Қорақалпоғистон Республикаси"
+      appCustomTooltip="Қорақалпоғистон Республикаси"
     ></path>
   </g>
 </g>`;
