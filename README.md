@@ -1,27 +1,36 @@
-# UzbekistanMap
+# O'zbekiston xaritasi [Angular]
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+Biror loiyhalarda ishlash jarayonida siz dasturchidan O'zbekiston xaritasini ko'rsatishni va hududlar bo'yicha statistikalarni ko'rsatib berishni so'rashadi. Ushbu repository Angularda yuqoridagi masalada yordam berish uchun qilingan.
 
-## Development server
+# Kutubxona
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Loyihadagi asosiy kod projects/ngx-uzbekistan-map ichida yozilgan. Bu kutubxona bo'lib npm ga ham paket ko'rinishida [joylangan](https://www.npmjs.com/package/ngx-uzbekistan-map)
+Kutubxona 2 ta komponentni taklif qiladi:
 
-## Code scaffolding
+1. Juda oddiy bo'lib sizga karta ko'rnib turadi va biror regionni ustiga kelishiz(hover chiqadi), uni tanlashiz mumkin(tumanlar chiqadi).
+2. Ikkinchi komponent Leafletga asoslangan bo'lib unda zoom, pan, drag tushunchalari mavjud va bu bilan kartadan foydalanish yanda qulaylashadi.
+   > Leafletga asoslangan komponentni ishlatish uchun loyihangizga `npm install leaflet` komondasi orqali leafletni o'rnatishiz va angular.json fayldagi assets massiviga `"./node_modules/leaflet/dist/leaflet.css"` ni qo'shib qo'yishiz kerak bo'ladi. Buni ham ushbu loyihadan solishtirib qanday qilinganini ko'rib olsangiz bo'ladi.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Ishga tushirish
 
-## Build
+Loyihani yuklab olib `ng serve` komandasi orqali ishga tushirsangiz bo'ladi. Sizda 3 ta menudan iborat sahifa chiqadi:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. **Sample** (Oddiy komponentni qanday ishlatish)
+2. **By Leaflet** (Leaflet orqali qilingan komponentni qanday ishlatish)
+3. **Constructor**
+   Ushbu bo'lim siz uchun juda foydali bo'ladi. Ya'ni bu bo'lim bilan kartani dinamik qilsa bo'ladi. **Qanday qilinadi?** Tepada o'ng tarafda ikkita textarea bo'lib hudud va tumanlar haqidagi kerakli ma'lumotlarni ya'ni turli xil tildagi nomlarini va ularning id larini ushlab turadi. Agar viloyat yoki tuman nomlari o'zgaradigan bo'lsa, sizdagi id lar boshqacha bo'lsa ushbu json ma'lumotlarni o'zizga nusxalab olib keraklicha to'g'irlab olishingiz kerak bo'ladi. Shundan keyin _Do it_ tugmasini bosasiz va pastki qismdagi textareada loyihadagi o'zgarmas svg (map.svg), region va tumanlarning json datalari birlashgan yangi svgning matni hozil bo'ladi. Buni nusxalab olib kutubxonadagi `ngx-uzbekistan-map.component.html` faylga va `_svg.ts` ga qo'yishingiz kerak bo'ladi. Shunda kutubxona yangi datalarga moslashgan ko'rinishda paydo bo'ladi. Demak kutubxonadagi karta ma'lumotlari(asosan ID) sizga mos kelmasa kodni bemalol nusxalab olib o'zizga moslaysiz yoki shu datalarga loyihangizni moslaysiz.
 
-## Running unit tests
+# Demo
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Shu yerda link bo'ladi demoga ;)
 
-## Running end-to-end tests
+# Xulosa
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- kartaga tegishli barcha logikalar ushbu loyiha ichidagi kutubxonada yotadi;
+- ikki xil uslubdagi kartalar mavjud (oddiy va leafletga asoslangan);
+- kartalardan qanday foydalanishni Sample, By Leaflet componentlaridan kodni o'qish orqali bilib olsa bo'ladi;
+- Constructor component orqali esa json datadan O'zbeksiton xaritasi svg siga ma'lumot yozsa va uni kutubxonaga qo'shsa bo'ladi.
 
-## Further help
+# Donat uchun
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Loyiha sizga foydali bo'lgan bo'lsa muallifni qo'llab [quvvatlang](https://tirikchilik.uz/utamuratovs)
