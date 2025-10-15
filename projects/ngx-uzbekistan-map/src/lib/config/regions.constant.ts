@@ -399,14 +399,12 @@ export const EDistricNames = {
 export const REGIONS_DATA: Record<ERegionNames, IArea> = {
   [ERegionNames.TASHKENT_CITY]: {
     id: ERegionIds.TASHKENT_CITY,
-    proteyRegionId: 1,
     parent_id: null,
     name_uz: 'Тошкент шаҳри',
     name_ru: 'Город Ташкент',
     name_uzl: 'Toshkent shahri',
     center: [41.311158, 69.279737],
     map_id: 'region_10',
-    districts: TASHKENT_CITY_DIST,
     bounds: [
       [41.1558, 69.0795], // Southwest corner of the bounding box
       [41.4828, 69.3874], // Northeast corner of the bounding box
@@ -420,7 +418,6 @@ export const REGIONS_DATA: Record<ERegionNames, IArea> = {
     name_uzl: 'Toshkent viloyati',
     center: [41.109877, 69.713407],
     map_id: 'region_11',
-    districts: TASHKENT_REGION_DIST,
     bounds: [
       [40.811151, 68.740562],
       [41.811151, 69.740562],

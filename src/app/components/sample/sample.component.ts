@@ -4,26 +4,28 @@ import {
   Component,
   ViewChild,
 } from '@angular/core';
-// import {
-//   NgxUzbekistanMapLeafletComponent,
-//   NgxUzbekistanMapComponent,
-// } from 'ngx-uzbekistan-map';
+// import { NgxUzbekistanMapComponent } from 'ngx-uzbekistan-map';
 import { NgxUzbekistanMapComponent } from '../../../../projects/ngx-uzbekistan-map/src/lib/ngx-uzbekistan-map.component';
-import { NgxUzbekistanMapLeafletComponent } from '../../../../projects/ngx-uzbekistan-map/src/lib/uzbekistan-map-leaflet/ngx-uzbekistan-map-leaflet.component';
-import { RouterLink } from '@angular/router';
+import { LoadingBlockComponent } from '../loading/loading-block/loading-block.component';
 
 @Component({
   selector: 'app-sample',
   standalone: true,
-  imports: [NgxUzbekistanMapComponent],
+  imports: [NgxUzbekistanMapComponent, LoadingBlockComponent],
   template: `
-    <div style="height: 100vh">
-      <ngx-uzbekistan-map
-        #uzbekistanMap
-        (onSelectedProvince)="handleSelectedProvince($event)"
-        (onSelectedDistrict)="handleSelectedDistrict($event)"
-        (onSelectedUzbekistan)="handleSelectedUzbekistan()"
-      ></ngx-uzbekistan-map>
+    <div style="height: calc(100vh - 100px)">
+      @defer {
+        <ngx-uzbekistan-map
+          #uzbekistanMap
+          (onSelectedProvince)="handleSelectedProvince($event)"
+          (onSelectedDistrict)="handleSelectedDistrict($event)"
+          (onSelectedUzbekistan)="handleSelectedUzbekistan()"
+        ></ngx-uzbekistan-map>
+      } @placeholder {
+        <div style="height: calc(100vh - 100px); position: relative;">
+          <app-loading-block />
+        </div>
+      }
     </div>
   `,
   styleUrl: './sample.component.css',

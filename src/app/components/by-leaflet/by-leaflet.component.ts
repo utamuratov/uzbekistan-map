@@ -1,18 +1,26 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+// import { NgxUzbekistanMapLeafletComponent } from 'ngx-uzbekistan-map';
 import { NgxUzbekistanMapLeafletComponent } from '../../../../projects/ngx-uzbekistan-map/src/public-api';
+import { LoadingBlockComponent } from '../loading/loading-block/loading-block.component';
 
 @Component({
   selector: 'app-by-leaflet',
   standalone: true,
-  imports: [NgxUzbekistanMapLeafletComponent],
+  imports: [NgxUzbekistanMapLeafletComponent, LoadingBlockComponent],
   template: `
-    <div style="height: 100vh">
-      <ngx-uzbekistan-map-leaflet
-        #uzbekistanMapLeaflet
-        (onSelectedProvince)="handleSelectedProvince($event)"
-        (onSelectedDistrict)="handleSelectedDistrict($event)"
-        (onSelectedUzbekistan)="handleSelectedUzbekistan()"
-      ></ngx-uzbekistan-map-leaflet>
+    <div style="height: calc(100vh - 100px)">
+      @defer {
+        <ngx-uzbekistan-map-leaflet
+          #uzbekistanMapLeaflet
+          (onSelectedProvince)="handleSelectedProvince($event)"
+          (onSelectedDistrict)="handleSelectedDistrict($event)"
+          (onSelectedUzbekistan)="handleSelectedUzbekistan()"
+        ></ngx-uzbekistan-map-leaflet>
+      } @placeholder {
+        <div style="height: calc(100vh - 100px); position: relative;">
+          <app-loading-block />
+        </div>
+      }
     </div>
   `,
   styleUrl: './by-leaflet.component.css',

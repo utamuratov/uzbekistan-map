@@ -118,7 +118,8 @@ export class NgxUzbekistanMapLeafletComponent {
     path: SVGPathElement,
     leafletMouseEvent?: L.LeafletMouseEvent
   ) {
-    const { title, type, name_uz, name_uzl, name_ru } = path.dataset;
+    const { title, type, name_uz, name_uzl, name_ru, soato, new_id } =
+      path.dataset;
     const id = path.id;
 
     // WHEN CLICKED PROVINCE
@@ -135,7 +136,14 @@ export class NgxUzbekistanMapLeafletComponent {
       // HIDE SELECTED PROVINCE PATH
       path.style.display = 'none';
 
-      this.lastSelectedProvince = { id, name_ru, name_uzl, name_uz } as IArea;
+      this.lastSelectedProvince = {
+        id,
+        name_ru,
+        name_uzl,
+        name_uz,
+        soato,
+        new_id,
+      } as IArea;
       this.onSelectedProvince.emit(this.lastSelectedProvince);
       return;
     }
@@ -143,7 +151,14 @@ export class NgxUzbekistanMapLeafletComponent {
     // WHEN CLICKED DISTRICT
     this.lastSelectedDistrictPath = path;
     path.classList.add('active-district');
-    this.lastSelectedDistrict = { id, name_ru, name_uzl, name_uz } as IArea;
+    this.lastSelectedDistrict = {
+      id,
+      name_ru,
+      name_uzl,
+      name_uz,
+      soato,
+      new_id,
+    } as IArea;
     this.onSelectedDistrict.emit(this.lastSelectedDistrict);
   }
 

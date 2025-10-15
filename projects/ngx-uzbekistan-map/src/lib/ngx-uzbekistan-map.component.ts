@@ -142,7 +142,8 @@ export class NgxUzbekistanMapComponent implements AfterViewInit {
   }
 
   private onSelectProvinceOrDistrict(path: SVGPathElement) {
-    const { title, type, name_uz, name_uzl, name_ru } = path.dataset;
+    const { title, type, name_uz, name_uzl, name_ru, soato, new_id } =
+      path.dataset;
     const id = path.id;
     console.log('id', id);
     console.log('title', title);
@@ -172,7 +173,14 @@ export class NgxUzbekistanMapComponent implements AfterViewInit {
       // HIDE SELECTED PROVINCE PATH
       path.style.display = 'none';
 
-      this.lastSelectedProvince = { id, name_ru, name_uzl, name_uz } as IArea;
+      this.lastSelectedProvince = {
+        id,
+        name_ru,
+        name_uzl,
+        name_uz,
+        soato,
+        new_id,
+      } as IArea;
       this.onSelectedProvince.emit(this.lastSelectedProvince);
       return;
     }
@@ -200,7 +208,14 @@ export class NgxUzbekistanMapComponent implements AfterViewInit {
     }
 
     path.classList.add('active-district');
-    this.lastSelectedDistrict = { id, name_ru, name_uzl, name_uz } as IArea;
+    this.lastSelectedDistrict = {
+      id,
+      name_ru,
+      name_uzl,
+      name_uz,
+      soato,
+      new_id,
+    } as IArea;
     this.onSelectedDistrict.emit(this.lastSelectedDistrict);
     //#endregion
   }

@@ -19,7 +19,7 @@
   color: #333;
   text-decoration: none;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   transition: all 0.2s ease-in-out;
@@ -38,9 +38,12 @@
 
 .author-link {
   color: #555;
-  font-size: 14px;
+  font-size: 15px;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 .author-link:hover {
@@ -65,4 +68,9 @@
     display: block;
     margin-top: 0.5rem;
   }
+}
+
+.menu-right {
+  display: flex;
+  gap: 1rem;
 }

@@ -22,7 +22,7 @@ Loyihani yuklab olib `ng serve` komandasi orqali ishga tushirsangiz bo'ladi. Siz
 
 # Demo
 
-Shu yerda link bo'ladi demoga ;)
+Demo [bu yerda](https://map.utamuratov.uz/)
 
 # Xulosa
 

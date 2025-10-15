@@ -3,23 +3,48 @@ import { MapComponent } from '../map/map.component';
 
 import { JsonPipe } from '@angular/common';
 import {
-  DISTRICTS_BY_REGION,
   ERegionIds,
   REGIONS_DATA,
 } from '../../../../projects/ngx-uzbekistan-map/src/public-api';
+import { RegionFormComponent } from './region-form/region-form.component';
+import { DistrictFormComponent } from './district-form/district-form.component';
+import { ERegionNames, IArea } from 'ngx-uzbekistan-map';
+import { LoadingBlockComponent } from '../loading/loading-block/loading-block.component';
 
 type AreaType = 'province' | 'district';
 
 @Component({
   selector: 'em-constructor',
   standalone: true,
-  imports: [JsonPipe, MapComponent],
+  imports: [
+    JsonPipe,
+    MapComponent,
+    RegionFormComponent,
+    DistrictFormComponent,
+    LoadingBlockComponent,
+  ],
   template: `
     <div class="container">
       <div class="content">
         <div class="map-section">
-          <button (click)="doIt()" class="action-btn">DO IT</button>
-          <em-map></em-map>
+          <button
+            (click)="
+              doIt(
+                regionForm.form.getRawValue(),
+                districtForm.form.getRawValue()
+              )
+            "
+            class="action-btn"
+          >
+            DO IT
+          </button>
+          @defer {
+            <em-map class="map"></em-map>
+          } @placeholder {
+            <div class="map" style="position: relative;">
+              <app-loading-block />
+            </div>
+          }
           <div class="textarea-wrapper">
             <textarea
               class="textarea wide"
@@ -32,7 +57,23 @@ type AreaType = 'province' | 'district';
           </div>
         </div>
 
-        <textarea
+        <div class="card medium" style="position: relative;">
+          @defer {
+            <app-region-form #regionForm />
+          } @placeholder {
+            <app-loading-block />
+          }
+        </div>
+
+        <div class="card medium" style="position: relative;">
+          @defer {
+            <app-district-form #districtForm />
+          } @placeholder {
+            <app-loading-block />
+          }
+        </div>
+
+        <!-- <textarea
           class="textarea medium"
           [value]="REGIONS | json"
           readonly
@@ -42,7 +83,7 @@ type AreaType = 'province' | 'district';
           class="textarea medium"
           [value]="DISTRICTS | json"
           readonly
-        ></textarea>
+        ></textarea> -->
       </div>
     </div>
   `,
@@ -51,14 +92,21 @@ type AreaType = 'province' | 'district';
 })
 export class ConstructorComponent {
   @ViewChild(MapComponent) mapComponent!: MapComponent;
-  readonly REGIONS = REGIONS_DATA;
-  readonly DISTRICTS = DISTRICTS_BY_REGION;
-  readonly REGIONS_ARRAY = Object.values(REGIONS_DATA);
+  @ViewChild(RegionFormComponent) regionForm!: RegionFormComponent;
+  @ViewChild(DistrictFormComponent) districtForm!: DistrictFormComponent;
+  // TODO: DEAD CODE
+  // readonly REGIONS = REGIONS_DATA;
+  // readonly DISTRICTS = DISTRICTS_BY_REGION;
+  // readonly REGIONS_ARRAY = Object.values(REGIONS_DATA);
 
   newSvg = '';
 
-  doIt() {
+  doIt(
+    regions: Record<ERegionNames, IArea>,
+    districts: Record<ERegionIds, IArea[]>,
+  ) {
     const map = this.mapComponent.map.nativeElement as SVGElement;
+    const regionsArray = Object.values(regions);
     if (map) {
       const gWrapper = map.children[0];
       const regions = gWrapper.children;
@@ -68,16 +116,19 @@ export class ConstructorComponent {
         const regionDistricts = regionGrouped.children[0].children;
         const regionSvgPath = regionGrouped.children[1] as SVGPathElement;
         // console.log('region', region);
-        const region = this.REGIONS_ARRAY[regionIndex];
+        const region = regionsArray[regionIndex];
         regionSvgPath.setAttribute('id', region.id);
         regionSvgPath.setAttribute('data-name_uz', region.name_uz);
         regionSvgPath.setAttribute('data-name_uzl', region.name_uzl);
         regionSvgPath.setAttribute('data-name_ru', region.name_ru);
         regionSvgPath.setAttribute('data-type', 'province' as AreaType);
+        // NEW DATA
+        regionSvgPath.setAttribute('data-new_id', region['new_id']);
+        regionSvgPath.setAttribute('data-soato', region['soato']);
         // SET TOOLTIP
         regionSvgPath.setAttribute('appCustomTooltip', region.name_uz);
 
-        const districtsByRegion = DISTRICTS_BY_REGION[region.id as ERegionIds];
+        const districtsByRegion = districts[region.id as ERegionIds];
         for (
           let districtIndex = 0;
           districtIndex < regionDistricts.length;
@@ -94,6 +145,9 @@ export class ConstructorComponent {
             districtSvgPath.setAttribute('data-name_uzl', district.name_uzl);
             districtSvgPath.setAttribute('data-name_ru', district.name_ru);
             districtSvgPath.setAttribute('data-type', 'district' as AreaType);
+            // NEW DATA
+            districtSvgPath.setAttribute('data-new_id', district['new_id']);
+            districtSvgPath.setAttribute('data-soato', district['soato']);
             // SET TOOLTIP
             districtSvgPath.setAttribute('appCustomTooltip', district.name_uz);
           }
