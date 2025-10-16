@@ -24,6 +24,10 @@ Loyihani yuklab olib `ng serve` komandasi orqali ishga tushirsangiz bo'ladi. Siz
 
 Demo [bu yerda](https://map.utamuratov.uz/)
 
+# Qo'llanma
+
+Qo'llanma [bu yerda](https://youtu.be/9kGOf40SpcA)
+
 # Xulosa
 
 - kartaga tegishli barcha logikalar ushbu loyiha ichidagi kutubxonada yotadi;
